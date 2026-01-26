@@ -1,10 +1,34 @@
+/* Reset – minimal */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+nav {
+  border-bottom: 1px solid #e0e0e0;
+}
+
 .nav {
   display: flex;
   gap: 1.25rem;
   list-style: none;
-  padding: 0;
-  margin: 1rem 0;
+  padding: 1rem;
+  margin: 0;
   flex-wrap: wrap;
+}
+
+.nav li {
+  margin: 0;
 }
 
 .nav a {
@@ -12,7 +36,28 @@
   color: inherit;
 }
 
+.nav a:hover {
+  text-decoration: underline;
+}
+
 .nav a[aria-current="page"] {
   text-decoration: underline;
   font-weight: 600;
+}
+
+/* =========================
+   Content-Grundlayout
+   ========================= */
+
+main {
+  padding: 2rem 1rem;
+  max-width: 720px;
+}
+
+header {
+  padding: 2rem 1rem 1rem;
+}
+
+h1, h2 {
+  line-height: 1.25;
 }
