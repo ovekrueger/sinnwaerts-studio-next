@@ -1,1 +1,61 @@
 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Über mich – Sinnwärts Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+  <header id="landung">
+    <h1>Über mich</h1>
+    <p>
+      Beziehung vor Erklärung.<br>
+      Haltung vor Lebenslauf.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- 1) Haltung / Wie ich schaue -->
+    <section id="haltung" aria-labelledby="haltung-title">
+      <h2 id="haltung-title">Wofür ich hier stehe</h2>
+      <p>[Platzhalter: 3–6 Sätze. Ruhig. Ohne Lebenslauf.]</p>
+    </section>
+
+    <!-- 2) Herkunft der Haltung (ohne Chronologie) -->
+    <section id="herkunft" aria-labelledby="herkunft-title">
+      <h2 id="herkunft-title">Wie diese Haltung entstanden ist</h2>
+      <p>[Platzhalter: Prägungen, nicht Stationen. Kurz.]</p>
+    </section>
+
+    <!-- 3) Eigene Erfahrung (würdevoll, nicht intim) -->
+    <section id="erfahrung" aria-labelledby="erfahrung-title">
+      <h2 id="erfahrung-title">Was ich gelernt habe</h2>
+      <p>[Platzhalter: Erfahrung als Boden. Keine Story. Keine Details.]</p>
+    </section>
+
+    <!-- 4) Wie ich begleite -->
+    <section id="begleitung" aria-labelledby="begleitung-title">
+      <h2 id="begleitung-title">Wie ich begleite</h2>
+      <p>[Platzhalter: Rolle, Tempo, Rahmen. Was nicht passiert. Was möglich wird.]</p>
+    </section>
+
+    <!-- 5) Für wen / für wen nicht -->
+    <section id="passung" aria-labelledby="passung-title">
+      <h2 id="passung-title">Für wen das passt – und für wen eher nicht</h2>
+      <p>[Platzhalter: 2 kleine Absätze. Klar. Würdevoll.]</p>
+    </section>
+
+    <!-- 6) Ruhige Einladung -->
+    <section id="einladung" aria-labelledby="einladung-title">
+      <h2 id="einladung-title">Wenn du weitergehen willst</h2>
+      <p>[Platzhalter: 1–2 Sätze. Optionaler Link später.]</p>
+    </section>
+
+  </main>
+
+</body>
+</html>
