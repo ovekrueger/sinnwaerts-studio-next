@@ -7,8 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
+
+
 <body>
 
+  <!-- NAV -->
+  <nav>
+    ...
+  </nav>
+
+  <header id="landung">
+    ...
   <header id="landung">
     <h1>Über mich</h1>
     <p>
