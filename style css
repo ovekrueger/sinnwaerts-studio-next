@@ -1,18 +1,18 @@
-<style>
-  .nav {
-    display: flex;
-    gap: 1.25rem;
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    flex-wrap: wrap;
-  }
-  .nav a {
-    text-decoration: none;
-    color: inherit;
-  }
-  .nav a[aria-current="page"] {
-    text-decoration: underline;
-    font-weight: 600;
-  }
-</style>
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav a[aria-current="page"] {
+  text-decoration: underline;
+  font-weight: 600;
+}
