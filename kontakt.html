@@ -1,1 +1,224 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontakt – Ove Krüger | Sinnwärts Studio</title>
+  <meta name="description" content="Kontakt zu Ove Krüger – Erstkontakt, Fragen, Resonanz. Ruhig, klar, ohne Druck." />
+  <link rel="canonical" href="kontakt.html" />
+  <meta name="robots" content="index,follow" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body id="top" class="kontakt">
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand" href="index.html">Sinnwärts Studio</a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-mich.html">Über mich</a></li>
+          <li><a href="angebot.html">Angebote</a></li>
+          <li><a href="resonanzraum.html">Resonanzraum</a></li>
+          <li><a href="kontakt.html" class="active" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- UNIVERSAL HERO – Welle -->
+  <section class="hero-universal" style="padding-top:72px">
+    <img class="hero-bg"
+         src="/images/start-hero-welle.png"
+         alt="Sinnwärts Studio – Kontakt"
+         loading="eager" decoding="async" fetchpriority="high">
+
+    <img src="/images/ltc-siegel.png" alt="Life Trust Coach Siegel"
+         class="hero-badge" width="88" height="88" loading="lazy">
+
+    <div class="hero-inner">
+      <p class="hero-kicker">WIE DU MICH ERREICHST</p>
+      <h1 class="hero-title">Kontakt</h1>
+      <p class="hero-sub">Ruhig. Klar. Ohne Druck.</p>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- Kontaktinfos -->
+    <section class="wrap block">
+      <h2>So erreichst du mich</h2>
+      <p><strong>E-Mail:</strong> <a href="mailto:ove.krger@gmail.com">ove.krger@gmail.com</a></p>
+      <p><strong>Telefon:</strong> <a href="tel:+4915734567782">0157&nbsp;345&nbsp;677&nbsp;82</a></p>
+      <p><strong>Ort:</strong> Hamburg · Online &amp; vor Ort</p>
+      <hr style="border:0;border-top:1px solid var(--ring);opacity:.5;margin:1rem 0 0;">
+    </section>
+
+    <!-- Kontaktformular -->
+    <section class="wrap block">
+      <h2>Deine Nachricht</h2>
+
+      <p style="opacity:.9; max-width:72ch; margin:.75rem 0 1rem 0;">
+        Wenn du spürst, dass meine Arbeit dich anspricht und du klären möchtest,
+        ob und wie eine Begleitung für dich sinnvoll sein kann, nutze gern dieses Formular.
+        Ich lese jede Anfrage persönlich und antworte in Ruhe.
+      </p>
+
+      <form id="contactForm"
+            action="https://formspree.io/f/xpwkzjwk"
+            method="POST"
+            class="grid-2"
+            style="margin-top:.5rem;">
+
+        <input type="hidden" name="_subject" value="Neue Nachricht – Sinnwärts Studio">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+               style="position:absolute;left:-9999px;" aria-hidden="true">
+
+        <div>
+          <label for="name">Name *</label><br>
+          <input id="name" name="name" type="text" required class="input-dark">
+        </div>
+
+        <div>
+          <label for="email">E-Mail *</label><br>
+          <input id="email" name="email" type="email" required class="input-dark">
+        </div>
+
+        <div style="grid-column:1/-1">
+          <label for="anliegen">Worum geht es? *</label><br>
+          <select id="anliegen" name="anliegen" required class="input-dark">
+            <option value="" disabled selected>Bitte auswählen…</option>
+            <option value="Erstkontakt / Kennenlernen">Erstkontakt / Kennenlernen</option>
+            <option value="Orientierung / Frage">Orientierung / Frage</option>
+            <option value="Coaching / Begleitung">Coaching / Begleitung</option>
+            <option value="Rückmeldung / Resonanz">Rückmeldung / Resonanz</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
+        </div>
+
+        <div style="grid-column:1/-1">
+          <label for="msg">Nachricht</label><br>
+          <textarea id="msg" name="message" rows="7" class="input-dark"
+                    placeholder="Du kannst hier in eigenen Worten beschreiben, was dich bewegt oder warum du Kontakt aufnimmst."></textarea>
+        </div>
+
+        <div style="grid-column:1/-1; margin-top:.5rem;">
+          <h3 style="margin:0 0 .4rem 0;">Wofür dieser Kontakt gedacht ist</h3>
+          <ul style="margin:.25rem 0 0 1.1rem; opacity:.9; line-height:1.6;">
+            <li>Erstkontakt &amp; Kennenlernen</li>
+            <li>Fragen zu Coaching, Mentoring oder Begleitung</li>
+            <li>Orientierung in persönlichen Übergangsphasen</li>
+            <li>Rückmeldungen oder Resonanz</li>
+          </ul>
+        </div>
+
+        <div style="grid-column:1/-1; margin-top:.5rem;">
+          <h3 style="margin:0 0 .4rem 0;">Wofür dieser Kontakt nicht gedacht ist</h3>
+          <ul style="margin:.25rem 0 0 1.1rem; opacity:.9; line-height:1.6;">
+            <li>Akute Krisen oder Notfälle</li>
+            <li>Psychotherapie oder medizinische Beratung</li>
+            <li>Erwartung sofortiger Antworten</li>
+          </ul>
+          <p style="margin:.6rem 0 0 0; opacity:.85;">
+            Wenn du dich in einer akuten Krise befindest, wende dich bitte an entsprechende medizinische oder therapeutische Stellen.
+          </p>
+        </div>
+
+        <div style="grid-column:1/-1; margin-top:.75rem;">
+          <label style="font-size:.85rem;opacity:.8">
+            <input type="checkbox" name="consent" required>
+            Ich stimme zu, dass meine Angaben zur Kontaktaufnahme verarbeitet werden.
+            <a href="datenschutz.html" style="color:var(--gold)">Datenschutzhinweis</a>
+          </label>
+        </div>
+
+        <div style="grid-column:1/-1; margin-top:.35rem;">
+          <p style="font-size:.9rem;opacity:.85; margin:0;">
+            Hinweis: Ich arbeite bewusst entschleunigt. Antworten erfolgen in der Regel innerhalb weniger Tage.
+            Eine Anfrage bedeutet keine automatische Zusammenarbeit, sondern ist ein erster, beidseitig offener Kontakt.
+          </p>
+        </div>
+
+        <div style="grid-column:1/-1;text-align:center;margin-top:1rem;">
+          <button class="btn btn-gold" type="submit">Nachricht senden</button>
+        </div>
+
+      </form>
+
+      <script>
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          try {
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { "Accept": "application/json" }
+            });
+            if (res.ok) {
+              form.innerHTML =
+                "<p style='text-align:center;color:var(--gold);font-weight:600;font-size:1.1rem;'>Danke, deine Nachricht wurde gesendet.</p>";
+            } else {
+              form.innerHTML =
+                "<p style='text-align:center;color:red;'>Fehler beim Senden – bitte versuch es später erneut.</p>";
+            }
+          } catch (err) {
+            form.innerHTML =
+              "<p style='text-align:center;color:red;'>Netzwerkfehler – bitte später erneut versuchen.</p>";
+          }
+        });
+      </script>
+
+      <noscript>
+        <p>JavaScript aus? Schreib mir direkt:
+          <a href="mailto:ove.krger@gmail.com?subject=Anfrage%20Sinnw%C3%A4rts%20Studio">
+            ove.krger@gmail.com
+          </a>
+        </p>
+      </noscript>
+
+      <hr style="border:0;border-top:1px solid var(--ring);opacity:.5;margin:1.25rem 0 0;">
+      <p style="margin:1rem 0 0; opacity:.85;">
+        Rechtliches:
+        <a href="impressum.html" style="color:var(--gold)">Impressum</a> ·
+        <a href="datenschutz.html" style="color:var(--gold)">Datenschutz</a>
+      </p>
+
+    </section>
+  </main>
+
+  <a class="to-top" href="#top" aria-label="Nach oben" title="Nach oben">↑</a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap" style="text-align:center;padding:2rem 1rem;">
+      <small style="display:block;margin-bottom:.5rem;opacity:.85;">
+        © <span id="y"></span> Ove Krüger · Sinnwärts Studio
+      </small>
+      <nav style="font-size:.9rem;opacity:.85;" aria-label="Footer-Navigation">
+        <a href="index.html">Start</a> ·
+        <a href="ueber-mich.html">Über mich</a> ·
+        <a href="angebot.html">Angebote</a> ·
+        <a href="resonanzraum.html">Resonanzraum</a> ·
+        <a href="kontakt.html">Kontakt</a> ·
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    (function(){
+      var btn=document.querySelector('.to-top');
+      if(!btn) return;
+      function onScroll(){ btn.classList.toggle('show', window.scrollY > 600); }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+    })();
+  </script>
+
+</body>
+</html>
