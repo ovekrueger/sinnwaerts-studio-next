@@ -237,23 +237,24 @@
 
 </main>
 
-
+<!-- START: SITE FOOTER (einheitlich) -->
 <footer class="site-footer" role="contentinfo">
-  <div class="wrap" style="text-align:center;padding:2rem 1rem;">
-    <small style="display:block;opacity:.85;">
-      © <span id="y"></span> Sinnwärts Studio ·
-      <a href="/impressum.html">Impressum</a> ·
-      <a href="/datenschutz.html">Datenschutz</a>
+  <div class="wrap" style="text-align:center; padding:2rem 1rem;">
+    <small style="opacity:.85;">
+      <span id="y"></span> Sinnwärts Studio ·
+      <a href="impressum.html">Impressum</a> ·
+      <a href="datenschutz.html">Datenschutz</a>
     </small>
   </div>
 </footer>
 
 <script>
   (function () {
-    var y = document.getElementById('y');
+    var y = document.getElementById("y");
     if (y) y.textContent = new Date().getFullYear();
   })();
 </script>
+<!-- END: SITE FOOTER -->
 
 </body>
 </html>
