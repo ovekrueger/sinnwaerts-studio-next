@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link rel="stylesheet" href="./style.css?v=1">
   <meta charset="utf-8" />
-  <title>Sinnwärts Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sinnwärts Studio</title>
+  <link rel="stylesheet" href="./style.css?v=1">
 </head>
 
 <body>
-  
 
+  <!-- NAV -->
+  <nav aria-label="Hauptnavigation">
+    <ul class="nav">
+      <li><a href="index.html" aria-current="page">Start</a></li>
+      <li><a href="ueber-mich.html">Über mich</a></li>
+      <li><a href="haltung.html">Haltung</a></li>
+      <li><a href="sucht-und-regulation.html">Sucht &amp; Regulation</a></li>
+      <li><a href="resonanzraum.html">Resonanzraum</a></li>
+      <li><a href="ki-und-bewusstsein.html">KI &amp; Bewusstsein</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
 
-<nav aria-label="Hauptnavigation">
-  <ul class="nav">
-    <li><a href="index.html">Start</a></li>
-    <li><a href="ueber-mich.html">Über mich</a></li>
-    <li><a href="haltung.html">Haltung</a></li>
-    <li><a href="sucht-und-regulation.html">Sucht &amp; Regulation</a></li>
-    <li><a href="resonanzraum.html">Resonanzraum</a></li>
-    <li><a href="ki-und-bewusstsein.html">KI &amp; Bewusstsein</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
-</nav>
-
-  <header id="landung">
-    …
-  <!-- START: Landung -->
+  <!-- START: Landung / Hero -->
   <header id="landung">
     <h1>Sinnwärts Studio</h1>
 
@@ -42,30 +39,31 @@
 
     <p>
       Hier geht es um Regulation.<br>
-      Und um einen anderen Blick auf das, was gerade wirkt.
+      Und um einen ruhigen Blick auf das, was gerade wirkt.
     </p>
   </header>
-  <!-- ENDE: Landung -->
-
+  <!-- ENDE: Landung / Hero -->
 
   <main>
 
     <!-- START: Orientierung / Begriff -->
     <section id="orientierung" aria-labelledby="orientierung-title">
-      <h2 id="orientierung-title">Was genau meint Regulation – und warum ist sie gerade jetzt so wichtig?</h2>
+      <h2 id="orientierung-title">
+        Was genau meint Regulation – und warum ist sie gerade jetzt so wichtig?
+      </h2>
 
       <p>
-        Regulation meint die Fähigkeit, innere Zustände wahrzunehmen<br>
-        und so zu beeinflussen, dass sie wieder tragfähig werden.
+        Regulation bedeutet, innere Zustände wahrzunehmen<br>
+        und ihnen so zu begegnen,<br>
+        dass sie wieder tragfähig werden.
       </p>
 
       <p>
         Nicht durch Kontrolle.<br>
-        Sondern durch Verstehen, Tempo, Grenzen und Kontakt.
+        Sondern durch Verstehen, Tempo, Grenzen – und Kontakt.
       </p>
     </section>
     <!-- ENDE: Orientierung / Begriff -->
-
 
     <!-- START: Zeitqualität / Kontext -->
     <section id="zeitqualitaet" aria-labelledby="zeitqualitaet-title">
@@ -73,7 +71,7 @@
 
       <p>
         Gerade jetzt ist das wichtig,<br>
-        weil viele Menschen dauerhaft gefordert sind,<br>
+        weil viele Menschen dauerhaft gefordert sind –<br>
         ohne echte Pausen, ohne Resonanz, ohne Orientierung.
       </p>
 
@@ -82,26 +80,33 @@
         braucht das Nervensystem etwas anderes:<br>
         Zeit, Einordnung – und einen ruhigen Blick.
       </p>
+
+      <p>
+        Nicht, um langsamer zu werden.<br>
+        Sondern um wieder handlungsfähig zu sein.
+      </p>
     </section>
     <!-- ENDE: Zeitqualität / Kontext -->
 
   </main>
-    
-<footer class="site-footer" role="contentinfo">
-  <div class="wrap" style="text-align:center;padding:2rem 1rem;">
-    <small style="display:block;opacity:.85;">
-      © <span id="y"></span> Sinnwärts Studio ·
-      <a href="/impressum.html">Impressum</a> ·
-      <a href="/datenschutz.html">Datenschutz</a>
-    </small>
-  </div>
-</footer>
 
-<script>
-  (function () {
-    var y = document.getElementById('y');
-    if (y) y.textContent = new Date().getFullYear();
-  })();
-</script>
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap" style="text-align:center; padding:2rem 1rem;">
+      <small style="opacity:.85;">
+        © <span id="y"></span> Sinnwärts Studio ·
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a>
+      </small>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var y = document.getElementById("y");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+
 </body>
 </html>
