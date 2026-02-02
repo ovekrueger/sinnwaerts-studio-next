@@ -185,3 +185,66 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* =========================
+   NAV – EINHEITLICH FINAL
+   ========================= */
+
+.site-header{
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  background: #fff; /* falls du später dunkel willst, ändern wir hier zentral */
+}
+
+.nav-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding: 14px 1rem;
+}
+
+.brand{
+  font-weight:700;
+  text-decoration:none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.nav-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.nav-list li{
+  margin:0;
+  padding:0;
+}
+
+.nav-list a{
+  text-decoration:none;
+  color: inherit;
+}
+
+.nav-list a:hover{
+  text-decoration: underline;
+}
+
+.nav-list a[aria-current="page"]{
+  font-weight:700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Mobile: Menü darf umbrechen, aber bleibt „horizontal“ */
+@media (max-width: 680px){
+  .nav-container{
+    align-items:flex-start;
+  }
+  .nav-list{
+    gap:.7rem 1rem;
+  }
+}
