@@ -3,45 +3,44 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Über mich – Sinnwärts Studio</title>
+  <title>Über mich · Sinnwärts Studio</title>
   <link rel="stylesheet" href="./style.css?v=100">
 </head>
 
 <body>
 
   <!-- SITE HEADER -->
-<header class="site-header">
-  <div class="nav-container">
-    <a class="brand" href="index.html">Sinnwärts Studio</a>
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand" href="index.html">Sinnwärts Studio</a>
 
-    <nav aria-label="Hauptnavigation">
-      <ul class="nav-list">
-        <li><a href="index.html">Start</a></li>
-        <li><a href="ueber-mich.html">Über mich</a></li>
-        <li><a href="angebot.html">Angebot</a></li>
-        <li><a href="sucht-regulation.html">Sucht &amp; Regulation</a></li>
-        <li><a href="haltung.html" aria-current="page">Haltung</a></li>
-        <li><a href="resonanzraum.html">Resonanzraum</a></li>
-        <li><a href="ki-und-bewusstsein.html">KI &amp; Bewusstsein</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- /SITE HEADER -->
-
-
-  <!-- HERO / LANDUNG -->
-  <header id="landung">
-    <h1>Über mich</h1>
-    <p>
-      Beziehung vor Erklärung.<br>
-      Haltung vor Lebenslauf.
-    </p>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-mich.html" aria-current="page">Über mich</a></li>
+          <li><a href="angebot.html">Angebot</a></li>
+          <li><a href="sucht-regulation.html">Sucht &amp; Regulation</a></li>
+          <li><a href="haltung.html">Haltung</a></li>
+          <li><a href="resonanzraum.html">Resonanzraum</a></li>
+          <li><a href="ki-und-bewusstsein.html">KI &amp; Bewusstsein</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+  <!-- /SITE HEADER -->
 
-  <main>
+  <!-- MAIN -->
+  <main class="wrap">
+
+    <!-- HERO / LANDUNG (jetzt innerhalb main.wrap) -->
+    <section id="landung" aria-labelledby="landung-title" style="padding:3.5rem 0 2.5rem;">
+      <h1 id="landung-title">Über mich</h1>
+      <p>
+        Beziehung vor Erklärung.<br>
+        Haltung vor Lebenslauf.
+      </p>
+    </section>
 
     <!-- 1) Haltung / Wie ich schaue -->
     <section id="haltung" aria-labelledby="haltung-title">
@@ -81,7 +80,7 @@
       </p>
     </section>
 
-    <!-- 2) Herkunft der Haltung (ohne Chronologie) -->
+    <!-- 2) Herkunft der Haltung -->
     <section id="herkunft" aria-labelledby="herkunft-title">
       <h2 id="herkunft-title">Wie diese Haltung entstanden ist</h2>
 
@@ -115,7 +114,7 @@
       </p>
     </section>
 
-    <!-- 3) Eigene Erfahrung (würdevoll, nicht intim) -->
+    <!-- 3) Was ich gelernt habe -->
     <section id="erfahrung" aria-labelledby="erfahrung-title">
       <h2 id="erfahrung-title">Was ich gelernt habe</h2>
 
@@ -183,7 +182,7 @@
       </p>
     </section>
 
-    <!-- 6) Ruhige Einladung -->
+    <!-- 6) Einladung -->
     <section id="einladung" aria-labelledby="einladung-title">
       <h2 id="einladung-title">Wenn du weitergehen willst</h2>
 
@@ -195,12 +194,13 @@
     </section>
 
   </main>
+  <!-- /MAIN -->
 
-  <!-- START: SITE FOOTER (einheitlich) -->
+  <!-- SITE FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="wrap" style="text-align:center; padding:2rem 1rem;">
       <small style="opacity:.85;">
-        <span id="y"></span> Sinnwärts Studio ·
+        © <span id="y"></span> Sinnwärts Studio ·
         <a href="impressum.html">Impressum</a> ·
         <a href="datenschutz.html">Datenschutz</a>
       </small>
@@ -213,7 +213,6 @@
       if (y) y.textContent = new Date().getFullYear();
     })();
   </script>
-  <!-- END: SITE FOOTER -->
 
 </body>
 </html>
