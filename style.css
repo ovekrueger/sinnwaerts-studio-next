@@ -183,68 +183,79 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-}
-/* =========================
-   NAV – EINHEITLICH FINAL
+  /* =========================
+   NAV – EINHEITLICH FINAL v2
    ========================= */
 
 .site-header{
   border-bottom: 1px solid rgba(0,0,0,.08);
-  background: #fff; /* falls du später dunkel willst, ändern wir hier zentral */
+  background: #fff;
 }
 
 .nav-container{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  padding: 14px 1rem;
+  max-width: 980px;       /* passt zu deinem ruhigen Layout */
+  margin: 0 auto;
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .brand{
-  font-weight:700;
-  text-decoration:none;
+  font-weight: 700;
+  text-decoration: none;
   color: inherit;
   white-space: nowrap;
 }
 
 .nav-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  gap:1rem;
-  flex-wrap:wrap;
-  align-items:center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+
+  flex-wrap: wrap;          /* darf umbrechen */
+  line-height: 1.2;
 }
 
-.nav-list li{
-  margin:0;
-  padding:0;
-}
+.nav-list li{ margin: 0; padding: 0; }
 
 .nav-list a{
-  text-decoration:none;
+  text-decoration: none;
   color: inherit;
+  padding: 6px 2px;         /* bessere Klickfläche */
+  white-space: nowrap;      /* verhindert hässliche Wortumbrüche */
 }
 
 .nav-list a:hover{
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nav-list a[aria-current="page"]{
-  font-weight:700;
+  font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-/* Mobile: Menü darf umbrechen, aber bleibt „horizontal“ */
-@media (max-width: 680px){
+/* Mobile: Brand oben, Menü darunter – aber weiterhin „Leiste“ */
+@media (max-width: 820px){
   .nav-container{
-    align-items:flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
+
   .nav-list{
-    gap:.7rem 1rem;
+    justify-content: flex-start;
+    gap: 10px 14px;
   }
+}
+-decoration: underline;
 }
