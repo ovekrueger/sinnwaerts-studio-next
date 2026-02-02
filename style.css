@@ -266,25 +266,35 @@ button:active{ transform: translateY(1px); }
   display: block;
   opacity: .85;
 }
+/* =========================
+   HERO
+   ========================= */
+
 .hero {
   position: relative;
-  max-width: 720px;
-  margin: 0 auto 2.5rem;
+  max-width: 760px;              /* exakt wie .wrap */
+  margin: 2.5rem auto 2rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .hero img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 6px;
 }
 
+/* Motto im Bild */
 .hero-motto {
   position: absolute;
+  left: 1.75rem;
   bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  color: #eae6df;
+  max-width: 420px;
+
   font-size: 0.95rem;
   line-height: 1.5;
+  color: var(--text-main);
   opacity: 0.85;
 }
