@@ -1,22 +1,39 @@
 /* =========================
-   Sinnwärts Studio – style.css (clean)
+   Sinnwärts Studio – style.css (final)
    ========================= */
 
-/* Reset */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+/* =========================
+   Tokens (Farben)
+   ========================= */
+
+:root{
+  --bg-main: #0B0F12;      /* Anthrazit – Grundfläche */
+  --bg-header: #11161B;    /* Header minimal heller */
+  --text-main: #EDE7DA;    /* Off-White – Lesetext */
+  --accent-gold: #D4AF37;  /* Gold – Akzent, nie Fließtext */
+}
+
+/* =========================
+   Reset
+   ========================= */
+
+*{ box-sizing: border-box; }
+
+html, body{ margin: 0; padding: 0; }
 
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #111;
-  background: #fff;
+
+  /* Token-Anbindung */
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 /* Focus */
 :focus-visible{
-  outline: 3px solid #111;
+  outline: 3px solid var(--text-main);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -69,6 +86,7 @@ h1, h2, h3{
   line-height: 1.25;
   margin: 0 0 .75rem;
   letter-spacing: -0.01em;
+  color: var(--text-main); /* Headlines nie schwarz */
 }
 
 h1{
@@ -96,8 +114,8 @@ em{ font-style: italic; }
    ========================= */
 
 .site-header{
-  border-bottom: 1px solid #e0e0e0;
-  background: #fff;
+  background: var(--bg-header);
+  border-bottom: 1px solid rgba(212,175,55,0.15); /* leise Goldkante */
 }
 
 /* Header darf breiter als Content sein */
@@ -191,9 +209,12 @@ textarea{
   width: 100%;
   font: inherit;
   padding: .75rem .85rem;
-  border: 1px solid rgba(0,0,0,.18);
+
+  border: 1px solid rgba(237,231,218,.25);
   border-radius: 10px;
-  background: #fff;
+
+  background: rgba(255,255,255,.02);
+  color: var(--text-main);
 }
 
 textarea{
@@ -205,8 +226,8 @@ input:focus,
 select:focus,
 textarea:focus{
   outline: none;
-  border-color: rgba(0,0,0,.45);
-  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
+  border-color: rgba(237,231,218,.45);
+  box-shadow: 0 0 0 3px rgba(237,231,218,.10);
 }
 
 input[type="checkbox"]{
@@ -221,12 +242,15 @@ button{
   font-weight: 700;
   padding: .75rem 1.1rem;
   border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.35);
+
+  border: 1px solid rgba(212,175,55,.55);
   background: transparent;
+  color: var(--text-main);
+
   cursor: pointer;
 }
 
-button:hover{ background: rgba(0,0,0,.05); }
+button:hover{ background: rgba(212,175,55,.08); }
 button:active{ transform: translateY(1px); }
 
 /* =========================
@@ -234,21 +258,11 @@ button:active{ transform: translateY(1px); }
    ========================= */
 
 .site-footer{
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid rgba(212,175,55,0.12);
   margin-top: 3rem;
 }
 
 .site-footer small{
   display: block;
   opacity: .85;
-}
-:root{
-  --bg-main: #0B0F12;
-  --bg-header: #11161B;   /* + ca. 6 % Helligkeit */
-  --text-main: #EDE7DA;
-  --accent-gold: #D4AF37;
-}
-.site-header{
-  background: var(--bg-header);
-  border-bottom: 1px solid rgba(212,175,55,0.15); /* sehr leise Goldkante */
 }
