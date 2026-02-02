@@ -213,3 +213,65 @@ button:active{ transform: translateY(1px); }
   display: block;
   opacity: .85;
 }
+/* =========================
+   Lesbarkeit / Typografie (Patch)
+   ========================= */
+
+/* Content-Spalte */
+.wrap{
+  max-width: 760px;        /* etwas breiter als 720, aber noch lesbar */
+  margin: 0 auto;
+  padding: 0 1.25rem;      /* mehr Rand links/rechts */
+}
+
+/* Standard-Textblockbreite */
+main p, main ul, main ol{
+  max-width: 72ch;         /* Zeilenlänge begrenzen */
+}
+
+/* Vertikaler Rhythmus */
+main{
+  padding: 3rem 0 3.5rem;
+}
+
+section{
+  margin: 0 0 2.25rem;     /* Abstand zwischen Themenblöcken */
+}
+
+/* Überschriften */
+h1{
+  font-size: clamp(2rem, 1.4rem + 2.2vw, 3rem);
+  margin: 1.75rem 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+h2{
+  font-size: clamp(1.35rem, 1.05rem + 1vw, 1.8rem);
+  margin: 2.25rem 0 .75rem;
+  letter-spacing: -0.01em;
+}
+
+h3{
+  font-size: 1.1rem;
+  margin: 1.5rem 0 .5rem;
+}
+
+/* Absätze: mehr Luft, weniger „Bleiwüste“ */
+p{
+  margin: 0 0 1.05rem;
+}
+
+/* Listen etwas sauberer */
+ul, ol{
+  padding-left: 1.1rem;
+}
+li{
+  margin: .25rem 0;
+}
+
+/* Mobile Feinschnitt */
+@media (max-width: 640px){
+  .wrap{ padding: 0 1rem; }
+  main{ padding: 2.25rem 0 3rem; }
+  h1{ margin-top: 1.25rem; }
+}
