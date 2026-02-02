@@ -242,3 +242,13 @@ button:active{ transform: translateY(1px); }
   display: block;
   opacity: .85;
 }
+:root{
+  --bg-main: #0B0F12;
+  --bg-header: #11161B;   /* + ca. 6 % Helligkeit */
+  --text-main: #EDE7DA;
+  --accent-gold: #D4AF37;
+}
+.site-header{
+  background: var(--bg-header);
+  border-bottom: 1px solid rgba(212,175,55,0.15); /* sehr leise Goldkante */
+}
