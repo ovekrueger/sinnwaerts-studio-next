@@ -278,3 +278,33 @@ button:active{ transform: translateY(1px); }
 
 .hero-motto{ margin: 0 0 .35rem; font-weight: 650; }
 .hero-sub{ margin: 0; opacity: .9; }
+/* ===== STARTSEITE – FIX: Dark Theme + Hero Text sichtbar ===== */
+
+/* Hintergrund + Grundtext */
+html, body{
+  background: #0B0F12;
+  color: #EDE7DA;
+}
+
+/* Header/Navigation dunkel halten (falls dein altes CSS hier weiß ist) */
+.site-header{
+  background: #11161B;
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+}
+
+/* Hero-Overlay sicher über dem Bild */
+.hero-media{ position: relative; }
+.hero-img{ position: relative; z-index: 0; }
+.hero-overlay{ z-index: 1; }
+
+/* Text im Hero erzwingen (sonst erbt er schwarz) */
+.hero-copy,
+.hero-motto,
+.hero-sub{
+  color: #EDE7DA;
+}
+
+/* Overlay-Lesbarkeit (optional, aber hilfreich) */
+.hero-copy{
+  background: rgba(0,0,0,.26);
+}
