@@ -243,3 +243,38 @@ button:active{ transform: translateY(1px); }
   display: block;
   opacity: .85;
 }
+/* ===== HERO (Startseite) ===== */
+.hero{ margin: 0 0 1.75rem; }
+
+.hero-media{
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hero-img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.25rem;
+  pointer-events: none;
+}
+
+.hero-copy{
+  text-align: center;
+  max-width: 34ch;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  background: rgba(0,0,0,.22);
+}
+
+.hero-motto{ margin: 0 0 .35rem; font-weight: 650; }
+.hero-sub{ margin: 0; opacity: .9; }
