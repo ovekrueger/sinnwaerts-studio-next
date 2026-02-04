@@ -333,3 +333,10 @@ html, body{
 .hero-copy{
   background: rgba(0,0,0,.26);
 }
+/* HERO – Text schwebt von oben */
+.hero-overlay{
+  align-items: flex-start;   /* statt flex-end */
+  justify-content: center;
+  padding-top: 1.8rem;       /* Luft nach oben */
+  padding-bottom: 0;         /* unten egal */
+}
