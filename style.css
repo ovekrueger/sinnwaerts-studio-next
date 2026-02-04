@@ -303,7 +303,32 @@ html, body{
 .hero-sub{
   color: #EDE7DA;
 }
+/* ===== HERO – Wirkung: "aus dem Nichts" ===== */
 
+/* etwas näher an den Content */
+.hero{ margin: 0 0 1.25rem; }
+
+/* Textblock tiefer und weicher */
+.hero-overlay{
+  padding-bottom: 1.6rem;  /* vorher 1.25rem */
+}
+
+/* Box weniger "Kasten", mehr Nebel */
+.hero-copy{
+  background: rgba(0,0,0,.18);     /* weicher */
+  backdrop-filter: blur(6px);      /* stärkerer Nebel */
+  border: 1px solid rgba(212,175,55,0.10); /* hauchfeine Goldkante */
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* Typo minimal leiser + klarer */
+.hero-motto{
+  letter-spacing: 0.01em;
+}
+
+.hero-sub{
+  opacity: .85;
+}
 /* Overlay-Lesbarkeit (optional, aber hilfreich) */
 .hero-copy{
   background: rgba(0,0,0,.26);
