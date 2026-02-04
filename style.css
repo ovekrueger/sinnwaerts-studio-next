@@ -347,6 +347,4 @@ html, body{
   padding-top: 1.8rem;       /* Luft nach oben */
   padding-bottom: 0;         /* unten egal */
 }
-.hero-copy{
-  background: rgba(0,0,0,.14); /* statt .18 */
-}
+.hero-copy{ text-align: left; }
