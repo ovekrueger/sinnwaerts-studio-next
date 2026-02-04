@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -29,48 +28,28 @@
       </nav>
     </div>
   </header>
-  
   <!-- /SITE HEADER -->
-  .hero{ margin: 0 0 1.75rem; }
 
-.hero-media{
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.hero-img{
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.hero-overlay{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 1.25rem;
-  pointer-events: none;
-}
-
-.hero-copy{
-  text-align: center;
-  max-width: 34ch;
-  padding: .7rem 1rem;
-  border-radius: 10px;
-  background: rgba(0,0,0,.22);
-}
-
-.hero-motto{ margin: 0 0 .35rem; font-weight: 650; }
-.hero-sub{ margin: 0; opacity: .9; }
 
   <!-- MAIN -->
   <main class="wrap">
 
-    <!-- LANDUNG / HERO (war vorher außerhalb und ohne wrap) -->
-    <section id="landung" aria-labelledby="landung-title" style="padding:3.5rem 0 2.5rem;">
+    <!-- HERO (Startseite) -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-media">
+        <img class="hero-img" src="Hero-Start.png" alt="Sinnwärts Studio – Hero">
+        <div class="hero-overlay">
+          <div class="hero-copy">
+            <p class="hero-motto">Regulation statt Selbstoptimierung.</p>
+            <p class="hero-sub">Ein ruhiger Blick auf das, was gerade wirkt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /HERO -->
+
+    <!-- LANDUNG -->
+    <section id="landung" aria-labelledby="landung-title">
       <h1 id="landung-title">Sinnwärts Studio</h1>
 
       <p>
@@ -132,6 +111,7 @@
 
   </main>
   <!-- /MAIN -->
+
 
   <!-- SITE FOOTER -->
   <footer class="site-footer" role="contentinfo">
