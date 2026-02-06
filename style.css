@@ -348,3 +348,21 @@ html, body{
   padding-bottom: 0;         /* unten egal */
 }
 .hero-copy{ text-align: left; }
+/* Leitmotiv unter dem Hero */
+.leitmotiv{
+  margin: 1.25rem 0 2.25rem;
+  text-align: left;
+}
+
+.leitmotiv-line{
+  margin: 0 0 .25rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  font-size: 1.05rem;
+}
+
+.leitmotiv-sub{
+  margin: 0;
+  opacity: .85;
+  font-size: .95rem;
+}
