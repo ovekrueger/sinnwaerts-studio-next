@@ -437,3 +437,27 @@ html, body{
   font-size: 0.9rem;
   color: rgba(212,175,55,0.9);
 }
+/* KI-Split: sauber zentriert + Bild rechts halten */
+.ki-hero-inline{
+  max-width: 720px;     /* gleiche Breite wie .wrap */
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(20px, 4vw, 44px);
+  align-items: start;
+}
+
+.ki-hero-text{
+  justify-self: start;
+}
+
+.ki-hero-visual{
+  justify-self: end;    /* <- das ist der „Bild nach rechts“-Hebel */
+  max-width: 420px;     /* verhindert Mitte-Riesenbild */
+}
+
+@media (max-width: 900px){
+  .ki-hero-inline{ grid-template-columns: 1fr; }
+  .ki-hero-visual{ justify-self: start; max-width: 100%; }
+}
