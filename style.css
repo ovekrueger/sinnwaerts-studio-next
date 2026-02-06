@@ -366,3 +366,74 @@ html, body{
   opacity: .85;
   font-size: .95rem;
 }
+/* KI & Bewusstsein – Split Hero */
+.ki-hero-inline{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 4vw, 44px);
+  align-items: start;
+  margin: 0 0 2.5rem;
+}
+
+@media (max-width: 900px){
+  .ki-hero-inline{
+    grid-template-columns: 1fr;
+  }
+}
+
+.ki-hero-text p{
+  margin: 0 0 0.85rem;
+}
+
+/* Bild: kontrollierte Höhe, keine Explosion */
+.ki-hero-visual{
+  position: relative;
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  max-width: 520px;      /* verhindert Riesenbreite */
+  justify-self: end;     /* schiebt es nach rechts */
+}
+
+@media (max-width: 900px){
+  .ki-hero-visual{
+    max-width: 100%;
+    justify-self: start;
+  }
+}
+
+.ki-hero-visual img{
+  display: block;
+  width: 100%;
+  height: clamp(240px, 34vw, 340px); /* <- bändigt Höhe */
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.92;
+}
+
+/* Overlay-Text (Fragment) */
+.ki-human,
+.ki-ai{
+  position: absolute;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  background: rgba(11,15,18,0.35); /* subtiler Schutz für Lesbarkeit */
+  backdrop-filter: blur(2px);
+}
+
+.ki-human{
+  left: 14px;
+  bottom: 14px;
+  font-size: 0.95rem;
+  color: rgba(237,231,218,0.95);
+}
+
+.ki-ai{
+  right: 14px;
+  top: 14px;
+  font-size: 0.9rem;
+  color: rgba(212,175,55,0.9);
+}
