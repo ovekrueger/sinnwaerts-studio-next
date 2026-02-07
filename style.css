@@ -1,23 +1,39 @@
-
 /* =========================
-   Sinnwärts Studio – style.css (clean)
+   Sinnwärts Studio – style.css (clean & konsolidiert)
    ========================= */
 
-/* Reset */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+/* =========================
+   Tokens
+   ========================= */
+:root{
+  --bg-main: #0B0F12;
+  --bg-header: #11161B;
+  --text-main: #EDE7DA;
+  --text-soft: rgba(237,231,218,.85);
+  --gold: #D4AF37;
+  --line: rgba(212,175,55,.15);
+  --card: rgba(17,22,27,.65);
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --radius: 14px;
+}
+
+/* =========================
+   Reset & Base
+   ========================= */
+*{ box-sizing:border-box; }
+html, body{ margin:0; padding:0; }
 
 body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #111;
-  background: #fff;
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 /* Focus */
 :focus-visible{
-  outline: 3px solid #111;
+  outline: 3px solid var(--text-main);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -31,28 +47,29 @@ a{
 a:hover{ text-decoration-thickness: 2px; }
 
 /* =========================
-   Layout: Content
+   Layout
    ========================= */
-
 .wrap{
   max-width: 760px;
   margin: 0 auto;
   padding: 0 1.25rem;
 }
 
-main.wrap{
-  padding: 3rem 0 3.5rem;
+main#main{
+  padding: 2.5rem 0 3.5rem;
+}
+
+/* Leiser Block-Rhythmus (deine HTML nutzt .block) */
+.block{
+  margin: 0 0 2.25rem;
 }
 
 /* Lesbare Zeilenlänge */
-main.wrap p,
-main.wrap ul,
-main.wrap ol{
+.wrap p,
+.wrap ul,
+.wrap ol{
   max-width: 72ch;
 }
-
-/* Vertikaler Rhythmus */
-section{ margin: 0 0 2.25rem; }
 
 p{ margin: 0 0 1.05rem; }
 
@@ -65,7 +82,6 @@ li{ margin: .25rem 0; }
 /* =========================
    Typografie
    ========================= */
-
 h1, h2, h3{
   line-height: 1.25;
   margin: 0 0 .75rem;
@@ -74,34 +90,31 @@ h1, h2, h3{
 
 h1{
   font-size: clamp(2rem, 1.4rem + 2.2vw, 3rem);
-  margin: 1.75rem 0 1rem;
+  margin: 1.25rem 0 1rem;
   letter-spacing: -0.02em;
 }
 
 h2{
   font-size: clamp(1.35rem, 1.05rem + 1vw, 1.8rem);
-  margin: 2.25rem 0 .75rem;
+  margin: 2rem 0 .75rem;
 }
 
 h3{
   font-size: 1.1rem;
-  margin: 1.5rem 0 .5rem;
+  margin: 1.2rem 0 .5rem;
 }
 
-/* kleine Akzente */
 strong{ font-weight: 700; }
 em{ font-style: italic; }
 
 /* =========================
-   NAV: einheitlich
+   Header / Navigation
    ========================= */
-
 .site-header{
-  border-bottom: 1px solid #e0e0e0;
-  background: #fff;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--line);
 }
 
-/* Header darf breiter als Content sein */
 .nav-container{
   max-width: 980px;
   margin: 0 auto;
@@ -113,7 +126,6 @@ em{ font-style: italic; }
   gap: 16px;
 }
 
-/* Brand */
 .brand{
   font-weight: 700;
   text-decoration: none;
@@ -125,7 +137,6 @@ em{ font-style: italic; }
   text-underline-offset: 4px;
 }
 
-/* Menü */
 .nav-list{
   list-style: none;
   margin: 0;
@@ -139,7 +150,6 @@ em{ font-style: italic; }
   flex-wrap: wrap;
   line-height: 1.2;
 }
-
 .nav-list li{ margin: 0; padding: 0; }
 
 .nav-list a{
@@ -160,7 +170,6 @@ em{ font-style: italic; }
   text-underline-offset: 4px;
 }
 
-/* Mobile */
 @media (max-width: 820px){
   .nav-container{
     flex-direction: column;
@@ -174,68 +183,10 @@ em{ font-style: italic; }
 }
 
 /* =========================
-   Formulare (Kontakt)
-   ========================= */
-
-form{ max-width: 760px; margin: 0 auto; }
-
-label{
-  display: inline-block;
-  font-weight: 600;
-  margin: 0 0 .35rem;
-}
-
-input[type="text"],
-input[type="email"],
-select,
-textarea{
-  width: 100%;
-  font: inherit;
-  padding: .75rem .85rem;
-  border: 1px solid rgba(0,0,0,.18);
-  border-radius: 10px;
-  background: #fff;
-}
-
-textarea{
-  min-height: 160px;
-  resize: vertical;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-  outline: none;
-  border-color: rgba(0,0,0,.45);
-  box-shadow: 0 0 0 3px rgba(0,0,0,.08);
-}
-
-input[type="checkbox"]{
-  width: auto;
-  margin-right: .5rem;
-  transform: translateY(1px);
-}
-
-/* Buttons */
-button{
-  font: inherit;
-  font-weight: 700;
-  padding: .75rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(0,0,0,.35);
-  background: transparent;
-  cursor: pointer;
-}
-
-button:hover{ background: rgba(0,0,0,.05); }
-button:active{ transform: translateY(1px); }
-
-/* =========================
    Footer
    ========================= */
-
 .site-footer{
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--line);
   margin-top: 3rem;
 }
 
@@ -243,8 +194,97 @@ button:active{ transform: translateY(1px); }
   display: block;
   opacity: .85;
 }
-/* ===== HERO (Startseite) ===== */
-.hero{ margin: 0 0 1.75rem; }
+
+/* =========================
+   Buttons
+   ========================= */
+.btn,
+button{
+  display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  padding: .75rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212,175,55,.35);
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover,
+button:hover{ background: rgba(212,175,55,.06); }
+
+.btn:active,
+button:active{ transform: translateY(1px); }
+
+/* =========================
+   Karten (Übungsmatte)
+   ========================= */
+.cards{
+  display: grid;
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+.cards--3{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px){
+  .cards--3{ grid-template-columns: 1fr; }
+}
+
+.card{
+  border: 1px solid rgba(212,175,55,.14);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem 1rem 1.05rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3{ margin-top: 0; }
+.card p{ margin-bottom: 0; color: var(--text-soft); }
+
+/* =========================
+   Quotes (Erfahrungen)
+   ========================= */
+.quotes{
+  display: grid;
+  gap: 16px;
+  margin-top: 1rem;
+}
+
+.quotes--grid{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px){
+  .quotes--grid{ grid-template-columns: 1fr; }
+}
+
+.quote{
+  border: 1px solid rgba(212,175,55,.14);
+  background: rgba(17,22,27,.55);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  margin: 0;
+}
+
+.quote blockquote{
+  margin: 0 0 .75rem;
+  color: var(--text-soft);
+}
+
+.quote figcaption{
+  opacity: .8;
+  font-size: .95rem;
+}
+
+/* =========================
+   Startseite – Hero + Leitmotiv
+   ========================= */
+.hero{ margin: 0 0 1.25rem; }
 
 .hero-media{
   position: relative;
@@ -262,156 +302,100 @@ button:active{ transform: translateY(1px); }
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start; /* Text schwebt oben */
   justify-content: center;
-  padding: 1.25rem;
+  padding-top: 1.8rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   pointer-events: none;
 }
 
 .hero-copy{
-  text-align: center;
-  max-width: 34ch;
+  text-align: left;
+  max-width: 36ch;
   padding: .7rem 1rem;
   border-radius: 10px;
-  background: rgba(0,0,0,.22);
-}
-
-.hero-motto{ margin: 0 0 .35rem; font-weight: 650; }
-.hero-sub{ margin: 0; opacity: .9; }
-/* ===== STARTSEITE – FIX: Dark Theme + Hero Text sichtbar ===== */
-
-/* Hintergrund + Grundtext */
-html, body{
-  background: #0B0F12;
-  color: #EDE7DA;
-}
-
-/* Header/Navigation dunkel halten (falls dein altes CSS hier weiß ist) */
-.site-header{
-  background: #11161B;
-  border-bottom: 1px solid rgba(212,175,55,0.15);
-}
-
-/* Hero-Overlay sicher über dem Bild */
-.hero-media{ position: relative; }
-.hero-img{ position: relative; z-index: 0; }
-.hero-overlay{ z-index: 1; }
-
-/* Text im Hero erzwingen (sonst erbt er schwarz) */
-.hero-copy,
-.hero-motto,
-.hero-sub{
-  color: #EDE7DA;
-}
-/* ===== HERO – Wirkung: "aus dem Nichts" ===== */
-
-/* etwas näher an den Content */
-.hero{ margin: 0 0 1.25rem; }
-
-/* Textblock tiefer und weicher */
-.hero-overlay{
-  padding-bottom: 1.6rem;  /* vorher 1.25rem */
-}
-
-/* Box weniger "Kasten", mehr Nebel */
-.hero-copy{
-  background: rgba(0,0,0,.18);     /* weicher */
-  backdrop-filter: blur(6px);      /* stärkerer Nebel */
-  border: 1px solid rgba(212,175,55,0.10); /* hauchfeine Goldkante */
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-}
-
-/* Typo minimal leiser + klarer */
-.hero-motto{
-  letter-spacing: 0.01em;
-}
-
-.hero-sub{
-  opacity: .85;
-}
-/* Overlay-Lesbarkeit (optional, aber hilfreich) */
-.hero-copy{
   background: rgba(0,0,0,.26);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(212,175,55,0.10);
+  box-shadow: var(--shadow);
 }
-/* HERO – Text schwebt von oben */
-.hero-overlay{
-  align-items: flex-start;   /* statt flex-end */
-  justify-content: center;
-  padding-top: 1.8rem;       /* Luft nach oben */
-  padding-bottom: 0;         /* unten egal */
-}
-/* HERO – Text schwebt von oben */
-.hero-overlay{
-  align-items: flex-start;   /* statt flex-end */
-  justify-content: center;
-  padding-top: 1.8rem;       /* Luft nach oben */
-  padding-bottom: 0;         /* unten egal */
-}
-.hero-copy{ text-align: left; }
-/* Leitmotiv unter dem Hero */
+
+.hero-motto{ margin: 0 0 .35rem; font-weight: 650; letter-spacing: .01em; }
+.hero-sub{ margin: 0; opacity: .85; }
+
 .leitmotiv{
   margin: 1.25rem 0 2.25rem;
   text-align: left;
 }
-
 .leitmotiv-line{
   margin: 0 0 .25rem;
   font-weight: 700;
   letter-spacing: .02em;
   font-size: 1.05rem;
 }
-
 .leitmotiv-sub{
   margin: 0;
   opacity: .85;
   font-size: .95rem;
 }
-/* KI & Bewusstsein – Split Hero */
+
+/* =========================
+   KI / Split-Layout (wiederverwendbar)
+   ========================= */
 .ki-hero-inline{
+  max-width: 760px;          /* wie .wrap */
+  margin: 0 auto 2.25rem;
+  padding: 0 1.25rem;
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: clamp(20px, 4vw, 44px);
   align-items: start;
-  margin: 0 0 2.5rem;
 }
 
 @media (max-width: 900px){
   .ki-hero-inline{
     grid-template-columns: 1fr;
+    padding: 0 1.25rem;
   }
 }
 
 .ki-hero-text p{
-  margin: 0 0 0.85rem;
+  margin: 0 0 .85rem;
+  color: var(--text-soft);
 }
 
-/* Bild: kontrollierte Höhe, keine Explosion */
 .ki-hero-visual{
   position: relative;
   margin: 0;
-  border-radius: 14px;
+  border-radius: var(--radius);
   overflow: hidden;
-  max-width: 520px;      /* verhindert Riesenbreite */
-  justify-self: end;     /* schiebt es nach rechts */
+  max-width: 420px;
+  justify-self: end; /* Bild nach rechts */
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(212,175,55,.14);
+  background: rgba(0,0,0,.10);
 }
 
 @media (max-width: 900px){
   .ki-hero-visual{
-    max-width: 100%;
     justify-self: start;
+    max-width: 100%;
   }
 }
 
+/* Standard: für KI-Seite darf es "cover" sein */
 .ki-hero-visual img{
   display: block;
   width: 100%;
-  height: clamp(240px, 34vw, 340px); /* <- bändigt Höhe */
+  height: clamp(240px, 34vw, 340px);
   object-fit: cover;
   object-position: center;
-  opacity: 0.92;
+  opacity: .95;
 }
 
-/* Overlay-Text (Fragment) */
+/* Overlay-Text (KI-Seite) */
 .ki-human,
 .ki-ai{
   position: absolute;
@@ -419,45 +403,44 @@ html, body{
   border-radius: 10px;
   font-weight: 600;
   letter-spacing: 0.01em;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
-  background: rgba(11,15,18,0.35); /* subtiler Schutz für Lesbarkeit */
+  text-shadow: 0 2px 10px rgba(0,0,0,.6);
+  background: rgba(11,15,18,0.35);
   backdrop-filter: blur(2px);
 }
 
 .ki-human{
   left: 14px;
   bottom: 14px;
-  font-size: 0.95rem;
+  font-size: .95rem;
   color: rgba(237,231,218,0.95);
 }
-
 .ki-ai{
   right: 14px;
   top: 14px;
-  font-size: 0.9rem;
-  color: rgba(212,175,55,0.9);
-}
-/* KI-Split: sauber zentriert + Bild rechts halten */
-.ki-hero-inline{
-  max-width: 720px;     /* gleiche Breite wie .wrap */
-  margin: 0 auto 2.5rem;
-  padding: 0 1rem;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(20px, 4vw, 44px);
-  align-items: start;
+  font-size: .9rem;
+  color: rgba(212,175,55,0.92);
 }
 
-.ki-hero-text{
-  justify-self: start;
+/* Caption (Resonanzraum / überall möglich) */
+.caption{
+  margin-top: .65rem;
+  font-size: .92rem;
+  opacity: .82;
+  line-height: 1.45;
+  color: var(--text-soft);
 }
 
-.ki-hero-visual{
-  justify-self: end;    /* <- das ist der „Bild nach rechts“-Hebel */
-  max-width: 420px;     /* verhindert Mitte-Riesenbild */
+/* =========================
+   WICHTIG: Resonanzraum – Bild NICHT beschneiden
+   (damit der Kopf nicht abgeschnitten wird)
+   ========================= */
+#ki-referenz .ki-hero-visual{
+  overflow: visible;       /* Caption darf "atmen" */
+  background: transparent; /* leiser im Resonanzraum */
 }
 
-@media (max-width: 900px){
-  .ki-hero-inline{ grid-template-columns: 1fr; }
-  .ki-hero-visual{ justify-self: start; max-width: 100%; }
+#ki-referenz .ki-hero-visual img{
+  height: auto;            /* <- das ist der Fix */
+  object-fit: contain;     /* <- kein Cropping */
+  border-radius: var(--radius);
 }
