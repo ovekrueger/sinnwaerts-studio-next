@@ -444,3 +444,23 @@ button:active{ transform: translateY(1px); }
   object-fit: contain;     /* <- kein Cropping */
   border-radius: var(--radius);
 }
+/* ===== HARD FIX: Content wieder mittig erzwingen ===== */
+.wrap{
+  max-width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+}
+
+/* falls main/sections zu breit geworden sind */
+main#main,
+main.wrap,
+section.wrap{
+  width: 100% !important;
+}
+
+/* Sicherheit: nichts darf links "kleben" */
+body{
+  overflow-x: hidden;
+}
