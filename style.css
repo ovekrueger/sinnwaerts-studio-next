@@ -1,5 +1,6 @@
 /* =========================
    Sinnwärts Studio – style.css (clean & konsolidiert)
+   inkl. Arrival Room „du“
    ========================= */
 
 /* =========================
@@ -29,6 +30,7 @@ body{
   line-height: 1.65;
   background: var(--bg-main);
   color: var(--text-main);
+  overflow-x: hidden; /* Sicherheit: nichts darf seitlich scrollen */
 }
 
 /* Focus */
@@ -55,7 +57,8 @@ a:hover{ text-decoration-thickness: 2px; }
   padding: 0 1.25rem;
 }
 
-main#main{
+/* Wichtig: gilt jetzt unabhängig von id/class */
+main{
   padding: 2.5rem 0 3.5rem;
 }
 
@@ -180,6 +183,59 @@ em{ font-style: italic; }
     justify-content: flex-start;
     gap: 10px 14px;
   }
+}
+
+/* =========================
+   Arrival Room (Vorraum)
+   ========================= */
+.arrival-room{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  /* Höhe: ruhiger Vorraum */
+  min-height: 32vh;
+
+  /* Farbwelt: 1:1 dein System */
+  background: var(--bg-main);
+
+  /* Leise Tiefe – kein Motiv, nur Raum */
+  background-image:
+    radial-gradient(1100px 520px at 58% 34%, rgba(237,231,218,.07), transparent 58%),
+    radial-gradient(900px 520px at 26% 72%, rgba(212,175,55,.05), transparent 62%);
+}
+
+.arrival-room__inner{
+  position: relative;
+  height: 100%;
+  min-height: 32vh;
+}
+
+/* „du“ – Kontaktpunkt, kein Claim */
+.arrival-room__word{
+  position: absolute;
+
+  /* leicht links + unterhalb der Mitte */
+  left: clamp(1.25rem, 6vw, 3.25rem);
+  top: 58%;
+  transform: translateY(-50%);
+
+  /* Typo: sehr leise */
+  font-size: clamp(.95rem, 1.2vw, 1.1rem);
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: 1;
+
+  /* Kontrast: wahrnehmbar, nicht dominant */
+  color: rgba(237,231,218,.52);
+
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 560px){
+  .arrival-room{ min-height: 36vh; }
+  .arrival-room__inner{ min-height: 36vh; }
 }
 
 /* =========================
@@ -431,7 +487,7 @@ button:active{ transform: translateY(1px); }
 }
 
 /* =========================
-   WICHTIG: Resonanzraum – Bild NICHT beschneiden
+   Resonanzraum – Bild NICHT beschneiden
    (damit der Kopf nicht abgeschnitten wird)
    ========================= */
 #ki-referenz .ki-hero-visual{
@@ -444,27 +500,10 @@ button:active{ transform: translateY(1px); }
   object-fit: contain;     /* <- kein Cropping */
   border-radius: var(--radius);
 }
-/* ===== HARD FIX: Content wieder mittig erzwingen ===== */
-.wrap{
-  max-width: 760px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 1.25rem !important;
-  padding-right: 1.25rem !important;
-}
 
-/* falls main/sections zu breit geworden sind */
-main#main,
-main.wrap,
-section.wrap{
-  width: 100% !important;
-}
-
-/* Sicherheit: nichts darf links "kleben" */
-body{
-  overflow-x: hidden;
-}
-/* Resonanzraum – Stark im Sturm (Split) */
+/* =========================
+   Resonanzraum – Stark im Sturm (Split)
+   ========================= */
 .stark-inline{
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
