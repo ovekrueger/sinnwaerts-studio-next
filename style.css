@@ -1,5 +1,5 @@
 /* =========================
-   Sinnwärts Studio – style.css (final, konsolidiert)
+   Sinnwärts Studio – style.css (FINAL, clean & konsolidiert)
    inkl. Arrival Room „du“ (3D-Perspektive, statisch)
    ========================= */
 
@@ -64,6 +64,7 @@ main{
 /* optionaler Block-Rhythmus */
 .block{ margin: 0 0 2.25rem; }
 
+/* Lesbare Zeilenlänge */
 .wrap p,
 .wrap ul,
 .wrap ol{ max-width: 72ch; }
@@ -147,6 +148,7 @@ em{ font-style: italic; }
   flex-wrap: wrap;
   line-height: 1.2;
 }
+
 .nav-list li{ margin: 0; padding: 0; }
 
 .nav-list a{
@@ -178,33 +180,38 @@ em{ font-style: italic; }
 }
 
 /* =========================
-   Arrival Room (Vorraum) – Raum + 3D-Perspektive (statisch)
+   Arrival Room (Vorraum)
+   Raum + Licht + 3D (statisch)
    ========================= */
+.arrival-room{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  min-height: 48vh;
+  background: var(--bg-main);
+
+  /* Mehr Licht-Impact oben, trotzdem Tiefe unten */
+  background-image:
+    radial-gradient(1200px 520px at 52% 18%, rgba(237,231,218,.26), transparent 58%),
+    radial-gradient(1400px 720px at 78% 80%, rgba(212,175,55,.12), transparent 66%),
+    radial-gradient(1100px 620px at 22% 86%, rgba(0,0,0,.62), transparent 64%),
+    linear-gradient(to bottom, rgba(0,0,0,.06), rgba(0,0,0,.78));
+}
+
+/* Luftschicht (einmal!): hebt die Lichtöffnung an */
 .arrival-room::before{
   content:"";
   position:absolute;
   inset:-2px;
   pointer-events:none;
-
   background: radial-gradient(
     1500px 700px at 52% 24%,
-    rgba(237,231,218,.22),
-    rgba(237,231,218,.08) 36%,
+    rgba(237,231,218,.18),
+    rgba(237,231,218,.06) 36%,
     transparent 62%
   );
-
   filter: blur(10px);
-  opacity: .9;
-}
-/* hauchdünne „Luftschicht“ davor (macht Raum) */
-.arrival-room::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  pointer-events:none;
-
-  background: radial-gradient(900px 420px at 42% 46%, rgba(255,255,255,.04), transparent 62%);
-  filter: blur(7px);
   opacity: .85;
 }
 
@@ -232,7 +239,7 @@ em{ font-style: italic; }
   min-height: 48vh;
 
   perspective: 900px;
-  perspective-origin: 30% 55%;
+  perspective-origin: 30% 55%; /* links/beziehungsnah */
 }
 
 /* „du“ – groß, präsent, kommt optisch aus dem Raum (ohne Bewegung) */
@@ -253,14 +260,15 @@ em{ font-style: italic; }
   letter-spacing: -0.02em;
   line-height: .95;
 
-  color: rgba(237,231,218,.82);
+  color: rgba(237,231,218,.88);
 
   text-shadow:
-    0 2px 0 rgba(255,255,255,.10),
+    0 2px 0 rgba(255,255,255,.12),
     0 24px 58px rgba(0,0,0,.72),
+    0 0 54px rgba(237,231,218,.12),
     0 0 44px rgba(212,175,55,.18);
 
-  filter: blur(.12px) saturate(1.03) contrast(1.04);
+  filter: blur(.12px) saturate(1.03) contrast(1.05);
 
   user-select: none;
   pointer-events: none;
@@ -269,10 +277,12 @@ em{ font-style: italic; }
 /* Mobile */
 @media (max-width: 560px){
   .arrival-room{ min-height: 54vh; }
+
   .arrival-room__inner{
     min-height: 54vh;
     perspective: 720px;
   }
+
   .arrival-room__word{
     left: clamp(2.25rem, 10vw, 6rem);
     transform:
