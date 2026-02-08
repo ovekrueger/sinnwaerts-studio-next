@@ -184,61 +184,97 @@ em{ font-style: italic; }
     gap: 10px 14px;
   }
 }
-
 /* =========================
-   Arrival Room (Vorraum)
+   Arrival Room (Vorraum) – Raum + 3D-Illusion
    ========================= */
+
 .arrival-room{
   width: 100%;
   position: relative;
   overflow: hidden;
 
-  /* Höhe: ruhiger Vorraum */
-  min-height: 32vh;
+  /* mehr Raum-Zeit */
+  min-height: 44vh;
 
-  /* Farbwelt: 1:1 dein System */
   background: var(--bg-main);
 
-  /* Leise Tiefe – kein Motiv, nur Raum */
+  /* Tiefe: oben Schutz, Mitte Öffnung, unten Erdung */
   background-image:
-    radial-gradient(1100px 520px at 58% 34%, rgba(237,231,218,.07), transparent 58%),
-    radial-gradient(900px 520px at 26% 72%, rgba(212,175,55,.05), transparent 62%);
+    radial-gradient(900px 420px at 48% 38%, rgba(237,231,218,.11), transparent 60%),
+    radial-gradient(1200px 650px at 72% 82%, rgba(212,175,55,.07), transparent 65%),
+    radial-gradient(900px 520px at 18% 78%, rgba(0,0,0,.55), transparent 62%),
+    linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,.68));
+}
+
+/* eine hauchdünne „Luftschicht“ davor (macht Raum) */
+.arrival-room::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  background:
+    radial-gradient(800px 380px at 40% 45%, rgba(255,255,255,.035), transparent 60%);
+  filter: blur(6px);
+  opacity: .9;
+}
+
+/* leichtes Filmkorn (optional, sehr leise) */
+.arrival-room::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,.018),
+      rgba(255,255,255,.018) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  opacity: .10;
+  mix-blend-mode: overlay;
 }
 
 .arrival-room__inner{
   position: relative;
   height: 100%;
-  min-height: 32vh;
+  min-height: 44vh;
 }
 
-/* „du“ – Kontaktpunkt, kein Claim */
+/* „du“ kommt optisch nach vorn – ohne Animation */
 .arrival-room__word{
   position: absolute;
 
-  /* leicht links + unterhalb der Mitte */
-  left: clamp(1.25rem, 6vw, 3.25rem);
-  top: 58%;
+  /* leicht links, beziehungsnah */
+  left: clamp(2.25rem, 9vw, 6.25rem);
+  top: 56%;
   transform: translateY(-50%);
 
-  /* Typo: sehr leise */
-  font-size: clamp(.95rem, 1.2vw, 1.1rem);
-  font-weight: 400;
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-weight: 420;
   letter-spacing: .02em;
   line-height: 1;
 
-  /* Kontrast: wahrnehmbar, nicht dominant */
-  color: rgba(237,231,218,.52);
+  /* 3D-Illusion: Lichtkante + Tiefe */
+  color: rgba(237,231,218,.68);
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.06),      /* kleine Lichtkante */
+    0 10px 26px rgba(0,0,0,.55),        /* Tiefe/Schweben */
+    0 0 26px rgba(212,175,55,.10);      /* warmer Hauch */
+
+  /* optional: leichte Klarheit ohne Dominanz */
+  filter: saturate(1.02) contrast(1.02);
 
   user-select: none;
   pointer-events: none;
 }
 
+/* Mobile: mehr Höhe, damit es wirkt */
 @media (max-width: 560px){
-  .arrival-room{ min-height: 36vh; }
-  .arrival-room__inner{ min-height: 36vh; }
-}
-
-/* =========================
+  .arrival-room{ min-height: 50vh; }
+  .arrival-room__inner{ min-height: 50vh; }
+}/* =========================
    Footer
    ========================= */
 .site-footer{
