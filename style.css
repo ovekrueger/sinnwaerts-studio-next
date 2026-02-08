@@ -213,8 +213,12 @@ em{ font-style: italic; }
   inset:-2px;
   pointer-events:none;
   background:
-    radial-gradient(900px 420px at 42% 46%, rgba(255,255,255,.04), transparent 62%);
-  filter: blur(7px);
+    radial-gradient(
+  1400px 620px at 50% 28%,
+  rgba(237,231,218,.16),
+  rgba(237,231,218,.06) 38%,
+  transparent 62%
+),  filter: blur(7px);
   opacity: .85;
 }
 
