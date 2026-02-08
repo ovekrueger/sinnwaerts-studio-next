@@ -1,5 +1,5 @@
 /* =========================
-   Sinnwärts Studio – style.css (clean & konsolidiert)
+   Sinnwärts Studio – style.css (final, konsolidiert)
    inkl. Arrival Room „du“ (3D-Perspektive, statisch)
    ========================= */
 
@@ -30,7 +30,7 @@ body{
   line-height: 1.65;
   background: var(--bg-main);
   color: var(--text-main);
-  overflow-x: hidden; /* Sicherheit: nichts darf seitlich scrollen */
+  overflow-x: hidden;
 }
 
 /* Focus */
@@ -57,22 +57,16 @@ a:hover{ text-decoration-thickness: 2px; }
   padding: 0 1.25rem;
 }
 
-/* Wichtig: gilt jetzt unabhängig von id/class */
 main{
   padding: 2.5rem 0 3.5rem;
 }
 
-/* Leiser Block-Rhythmus (deine HTML nutzt .block) */
-.block{
-  margin: 0 0 2.25rem;
-}
+/* optionaler Block-Rhythmus */
+.block{ margin: 0 0 2.25rem; }
 
-/* Lesbare Zeilenlänge */
 .wrap p,
 .wrap ul,
-.wrap ol{
-  max-width: 72ch;
-}
+.wrap ol{ max-width: 72ch; }
 
 p{ margin: 0 0 1.05rem; }
 
@@ -161,12 +155,10 @@ em{ font-style: italic; }
   padding: 6px 2px;
   white-space: nowrap;
 }
-
 .nav-list a:hover{
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-
 .nav-list a[aria-current="page"]{
   font-weight: 700;
   text-decoration: underline;
@@ -192,33 +184,26 @@ em{ font-style: italic; }
   width: 100%;
   position: relative;
   overflow: hidden;
-
-  /* mehr Raum-Zeit */
   min-height: 48vh;
-
   background: var(--bg-main);
 
-  /* Tiefe: oben Schutz, Mitte Öffnung, unten Erdung */
+  /* oben: Lichtquelle spürbar (nicht show), unten: Erdung */
   background-image:
-    radial-gradient(900px 420px at 48% 38%, rgba(237,231,218,.11), transparent 60%),
+    radial-gradient(1100px 520px at 50% 26%, rgba(237,231,218,.20), rgba(237,231,218,.08) 42%, transparent 70%),
     radial-gradient(1200px 650px at 72% 82%, rgba(212,175,55,.07), transparent 65%),
     radial-gradient(900px 520px at 18% 78%, rgba(0,0,0,.55), transparent 62%),
     linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.72));
 }
 
-/* eine hauchdünne „Luftschicht“ davor (macht Raum) */
+/* hauchdünne „Luftschicht“ davor (macht Raum) */
 .arrival-room::before{
   content:"";
   position:absolute;
   inset:-2px;
   pointer-events:none;
-  background:
-    radial-gradient(
-  1400px 620px at 50% 28%,
-  rgba(237,231,218,.16),
-  rgba(237,231,218,.06) 38%,
-  transparent 62%
-),  filter: blur(7px);
+
+  background: radial-gradient(900px 420px at 42% 46%, rgba(255,255,255,.04), transparent 62%);
+  filter: blur(7px);
   opacity: .85;
 }
 
@@ -245,16 +230,13 @@ em{ font-style: italic; }
   height: 100%;
   min-height: 48vh;
 
-  /* Perspektive für den 3D-Eindruck */
   perspective: 900px;
-  perspective-origin: 30% 55%; /* links/beziehungsnah */
+  perspective-origin: 30% 55%;
 }
 
 /* „du“ – groß, präsent, kommt optisch aus dem Raum (ohne Bewegung) */
 .arrival-room__word{
   position: absolute;
-
-  /* nicht am Rand: mehr Beziehung, mehr „gemeint“ */
   left: clamp(3.25rem, 12vw, 10.5rem);
   top: 60%;
 
@@ -273,9 +255,9 @@ em{ font-style: italic; }
   color: rgba(237,231,218,.82);
 
   text-shadow:
-    0 2px 0 rgba(255,255,255,.10),      /* Lichtkante */
-    0 24px 58px rgba(0,0,0,.72),        /* Tiefe / kommt vor */
-    0 0 44px rgba(212,175,55,.18);      /* warmer Hauch */
+    0 2px 0 rgba(255,255,255,.10),
+    0 24px 58px rgba(0,0,0,.72),
+    0 0 44px rgba(212,175,55,.18);
 
   filter: blur(.12px) saturate(1.03) contrast(1.04);
 
@@ -283,7 +265,7 @@ em{ font-style: italic; }
   pointer-events: none;
 }
 
-/* Mobile: mehr Höhe + weniger „Winkel“, damit es ruhig bleibt */
+/* Mobile */
 @media (max-width: 560px){
   .arrival-room{ min-height: 54vh; }
   .arrival-room__inner{
@@ -308,7 +290,6 @@ em{ font-style: italic; }
   border-top: 1px solid var(--line);
   margin-top: 3rem;
 }
-
 .site-footer small{
   display: block;
   opacity: .85;
@@ -329,30 +310,23 @@ button{
   cursor: pointer;
   text-decoration: none;
 }
-
 .btn:hover,
 button:hover{ background: rgba(212,175,55,.06); }
-
 .btn:active,
 button:active{ transform: translateY(1px); }
 
 /* =========================
-   Karten (Übungsmatte)
+   Karten
    ========================= */
 .cards{
   display: grid;
   gap: 16px;
   margin-top: 1rem;
 }
-
-.cards--3{
-  grid-template-columns: repeat(3, 1fr);
-}
-
+.cards--3{ grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px){
   .cards--3{ grid-template-columns: 1fr; }
 }
-
 .card{
   border: 1px solid rgba(212,175,55,.14);
   background: var(--card);
@@ -360,27 +334,21 @@ button:active{ transform: translateY(1px); }
   padding: 1rem 1rem 1.05rem;
   box-shadow: var(--shadow);
 }
-
 .card h3{ margin-top: 0; }
 .card p{ margin-bottom: 0; color: var(--text-soft); }
 
 /* =========================
-   Quotes (Erfahrungen)
+   Quotes
    ========================= */
 .quotes{
   display: grid;
   gap: 16px;
   margin-top: 1rem;
 }
-
-.quotes--grid{
-  grid-template-columns: repeat(3, 1fr);
-}
-
+.quotes--grid{ grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px){
   .quotes--grid{ grid-template-columns: 1fr; }
 }
-
 .quote{
   border: 1px solid rgba(212,175,55,.14);
   background: rgba(17,22,27,.55);
@@ -389,12 +357,10 @@ button:active{ transform: translateY(1px); }
   box-shadow: var(--shadow);
   margin: 0;
 }
-
 .quote blockquote{
   margin: 0 0 .75rem;
   color: var(--text-soft);
 }
-
 .quote figcaption{
   opacity: .8;
   font-size: .95rem;
@@ -421,7 +387,7 @@ button:active{ transform: translateY(1px); }
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: flex-start; /* Text schwebt oben */
+  align-items: flex-start;
   justify-content: center;
   padding-top: 1.8rem;
   padding-left: 1.25rem;
@@ -463,7 +429,7 @@ button:active{ transform: translateY(1px); }
    KI / Split-Layout (wiederverwendbar)
    ========================= */
 .ki-hero-inline{
-  max-width: 760px;          /* wie .wrap */
+  max-width: 760px;
   margin: 0 auto 2.25rem;
   padding: 0 1.25rem;
 
@@ -491,7 +457,7 @@ button:active{ transform: translateY(1px); }
   border-radius: var(--radius);
   overflow: hidden;
   max-width: 420px;
-  justify-self: end; /* Bild nach rechts */
+  justify-self: end;
   box-shadow: var(--shadow);
   border: 1px solid rgba(212,175,55,.14);
   background: rgba(0,0,0,.10);
@@ -504,7 +470,6 @@ button:active{ transform: translateY(1px); }
   }
 }
 
-/* Standard: für KI-Seite darf es "cover" sein */
 .ki-hero-visual img{
   display: block;
   width: 100%;
@@ -514,7 +479,6 @@ button:active{ transform: translateY(1px); }
   opacity: .95;
 }
 
-/* Overlay-Text (KI-Seite) */
 .ki-human,
 .ki-ai{
   position: absolute;
@@ -526,7 +490,6 @@ button:active{ transform: translateY(1px); }
   background: rgba(11,15,18,0.35);
   backdrop-filter: blur(2px);
 }
-
 .ki-human{
   left: 14px;
   bottom: 14px;
@@ -540,7 +503,6 @@ button:active{ transform: translateY(1px); }
   color: rgba(212,175,55,0.92);
 }
 
-/* Caption (Resonanzraum / überall möglich) */
 .caption{
   margin-top: .65rem;
   font-size: .92rem;
@@ -549,59 +511,42 @@ button:active{ transform: translateY(1px); }
   color: var(--text-soft);
 }
 
-/* =========================
-   Resonanzraum – Bild NICHT beschneiden
-   (damit der Kopf nicht abgeschnitten wird)
-   ========================= */
+/* Resonanzraum – Bild NICHT beschneiden */
 #ki-referenz .ki-hero-visual{
-  overflow: visible;       /* Caption darf "atmen" */
-  background: transparent; /* leiser im Resonanzraum */
+  overflow: visible;
+  background: transparent;
 }
-
 #ki-referenz .ki-hero-visual img{
-  height: auto;            /* <- das ist der Fix */
-  object-fit: contain;     /* <- kein Cropping */
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius);
 }
 
-/* =========================
-   Resonanzraum – Stark im Sturm (Split)
-   ========================= */
+/* Resonanzraum – Stark im Sturm (Split) */
 .stark-inline{
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: clamp(24px, 5vw, 56px);
   align-items: start;
 }
-
-.stark-text{
-  max-width: 72ch;
-}
-
+.stark-text{ max-width: 72ch; }
 .stark-visual{
   margin: 0;
   max-width: 360px;
 }
-
 .stark-visual img{
   width: 100%;
   height: auto;
   display: block;
   border-radius: 14px;
 }
-
 .stark-visual figcaption{
   margin-top: .5rem;
   font-size: .85rem;
   opacity: .75;
 }
 
-/* Mobile */
 @media (max-width: 900px){
-  .stark-inline{
-    grid-template-columns: 1fr;
-  }
-  .stark-visual{
-    max-width: 100%;
-  }
+  .stark-inline{ grid-template-columns: 1fr; }
+  .stark-visual{ max-width: 100%; }
 }
