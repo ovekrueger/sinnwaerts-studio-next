@@ -252,10 +252,18 @@ em{ font-style:italic; }
   border:1px solid rgba(212,175,55,.10);
 }
 
-.hero-motto{ font-weight:650; margin:0 0 .35rem; }
-.hero-sub{ margin:0; opacity:.85; }
+.hero-motto{
+  font-weight:650;
+  margin:0 0 .4rem;
+  font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.25rem);
+  letter-spacing: .01em;
+}
 
-
+.hero-sub{
+  margin:0;
+  opacity:.9;
+  font-size: clamp(.95rem, .9rem + 0.4vw, 1.05rem);
+}
 /* =========================
    STARTSEITE – PORTRAIT
    Atemzug unter Hero
