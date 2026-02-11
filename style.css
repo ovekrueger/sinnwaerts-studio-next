@@ -561,3 +561,21 @@ button:active{ transform: translateY(1px); }
   .stark-inline{ grid-template-columns: 1fr; }
   .stark-visual{ max-width: 100%; }
 }
+/* =========================
+   Startseite – Portrait (Atemzug)
+   ========================= */
+.home-portrait{
+  padding: 3.25rem 0 2.75rem;
+}
+
+.home-portrait__inner{
+  max-width: 520px;   /* ruhige Breite */
+  margin: 0 auto;
+}
+
+.home-portrait img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px; /* optional: wenn du es ganz hart willst -> 0 */
+}
