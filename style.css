@@ -1,10 +1,11 @@
 /* =========================
-   Sinnwärts Studio – style.css (FINAL, clean & konsolidiert)
-   inkl. Arrival Room „du“ (3D-Perspektive, statisch)
+   Sinnwärts Studio – style.css (FINAL)
+   Clean · Konsolidiert · inkl. Portrait-Atemzug
    ========================= */
 
+
 /* =========================
-   Tokens
+   TOKENS
    ========================= */
 :root{
   --bg-main: #0B0F12;
@@ -15,32 +16,39 @@
   --line: rgba(212,175,55,.15);
   --card: rgba(17,22,27,.65);
   --shadow: 0 10px 30px rgba(0,0,0,.25);
-  --radius: 14px;
+  --radius: 12px;
 }
 
+
 /* =========================
-   Reset & Base
+   RESET & BASE
    ========================= */
 *{ box-sizing:border-box; }
-html, body{ margin:0; padding:0; }
+
+html, body{
+  margin:0;
+  padding:0;
+}
 
 body{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.65;
   background: var(--bg-main);
   color: var(--text-main);
   overflow-x: hidden;
 }
 
-/* Focus */
 :focus-visible{
   outline: 3px solid var(--text-main);
   outline-offset: 3px;
   border-radius: 6px;
 }
 
-/* Links */
+
+/* =========================
+   LINKS
+   ========================= */
 a{
   color: inherit;
   text-decoration: underline;
@@ -48,8 +56,9 @@ a{
 }
 a:hover{ text-decoration-thickness: 2px; }
 
+
 /* =========================
-   Layout
+   LAYOUT
    ========================= */
 .wrap{
   max-width: 760px;
@@ -61,24 +70,17 @@ main{
   padding: 2.5rem 0 3.5rem;
 }
 
-/* optionaler Block-Rhythmus */
-.block{ margin: 0 0 2.25rem; }
-
-/* Lesbare Zeilenlänge */
 .wrap p,
 .wrap ul,
-.wrap ol{ max-width: 72ch; }
+.wrap ol{
+  max-width: 72ch;
+}
 
 p{ margin: 0 0 1.05rem; }
 
-ul, ol{
-  margin: .25rem 0 1rem;
-  padding-left: 1.1rem;
-}
-li{ margin: .25rem 0; }
 
 /* =========================
-   Typografie
+   TYPOGRAFIE
    ========================= */
 h1, h2, h3{
   line-height: 1.25;
@@ -102,11 +104,12 @@ h3{
   margin: 1.2rem 0 .5rem;
 }
 
-strong{ font-weight: 700; }
-em{ font-style: italic; }
+strong{ font-weight:700; }
+em{ font-style:italic; }
+
 
 /* =========================
-   Header / Navigation
+   HEADER / NAVIGATION
    ========================= */
 .site-header{
   background: var(--bg-header);
@@ -118,80 +121,63 @@ em{ font-style: italic; }
   margin: 0 auto;
   padding: 14px 16px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
 }
 
 .brand{
-  font-weight: 700;
-  text-decoration: none;
-  color: inherit;
-  white-space: nowrap;
-}
-.brand:hover{
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  font-weight:700;
+  text-decoration:none;
+  color:inherit;
+  white-space:nowrap;
 }
 
 .nav-list{
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style:none;
+  margin:0;
+  padding:0;
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 14px;
-
-  flex-wrap: wrap;
-  line-height: 1.2;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
 }
-
-.nav-list li{ margin: 0; padding: 0; }
 
 .nav-list a{
-  text-decoration: none;
-  color: inherit;
-  padding: 6px 2px;
-  white-space: nowrap;
-}
-.nav-list a:hover{
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.nav-list a[aria-current="page"]{
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration:none;
+  padding:6px 2px;
 }
 
-@media (max-width: 820px){
+.nav-list a:hover{
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+
+.nav-list a[aria-current="page"]{
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+
+@media (max-width:820px){
   .nav-container{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .nav-list{
-    justify-content: flex-start;
-    gap: 10px 14px;
+    flex-direction:column;
+    align-items:flex-start;
   }
 }
+
 
 /* =========================
-   Arrival Room (Vorraum)
-   Raum + Licht + 3D (statisch)
+   ARRIVAL ROOM ("du")
    ========================= */
 .arrival-room{
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-
-  min-height: 48vh;
+  width:100%;
+  min-height:48vh;
+  position:relative;
+  overflow:hidden;
   background: var(--bg-main);
 
-  /* Mehr Licht-Impact oben, trotzdem Tiefe unten */
   background-image:
     radial-gradient(1200px 520px at 52% 18%, rgba(237,231,218,.26), transparent 58%),
     radial-gradient(1400px 720px at 78% 80%, rgba(212,175,55,.12), transparent 66%),
@@ -199,383 +185,126 @@ em{ font-style: italic; }
     linear-gradient(to bottom, rgba(0,0,0,.06), rgba(0,0,0,.78));
 }
 
-/* Luftschicht (einmal!): hebt die Lichtöffnung an */
-.arrival-room::before{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  pointer-events:none;
-  background: radial-gradient(
-    1500px 700px at 52% 24%,
-    rgba(237,231,218,.18),
-    rgba(237,231,218,.06) 36%,
-    transparent 62%
-  );
-  filter: blur(10px);
-  opacity: .85;
-}
-
-/* sehr leises Filmkorn */
-.arrival-room::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255,255,255,.018),
-      rgba(255,255,255,.018) 1px,
-      transparent 1px,
-      transparent 3px
-    );
-  opacity: .09;
-  mix-blend-mode: overlay;
-}
-
 .arrival-room__inner{
-  position: relative;
-  height: 100%;
-  min-height: 48vh;
-
-  perspective: 900px;
-  perspective-origin: 30% 55%; /* links/beziehungsnah */
+  position:relative;
+  min-height:48vh;
+  perspective:900px;
 }
 
-/* „du“ – groß, präsent, kommt optisch aus dem Raum (ohne Bewegung) */
 .arrival-room__word{
-  position: absolute;
-  left: clamp(3.25rem, 12vw, 10.5rem);
-  top: 60%;
+  position:absolute;
+  left: clamp(3rem, 10vw, 9rem);
+  top:60%;
 
-  transform-style: preserve-3d;
   transform:
     translateY(-50%)
-    rotateX(18deg)
+    rotateX(16deg)
     rotateY(-6deg)
-    translateZ(90px);
+    translateZ(80px);
 
-  font-size: clamp(2.6rem, 4.6vw, 4.8rem);
-  font-weight: 520;
-  letter-spacing: -0.02em;
-  line-height: .95;
-
+  font-size: clamp(2.6rem, 4.6vw, 4.6rem);
+  letter-spacing:-0.02em;
   color: rgba(237,231,218,.88);
 
   text-shadow:
-    0 2px 0 rgba(255,255,255,.12),
-    0 24px 58px rgba(0,0,0,.72),
-    0 0 54px rgba(237,231,218,.12),
-    0 0 44px rgba(212,175,55,.18);
+    0 24px 58px rgba(0,0,0,.7),
+    0 0 40px rgba(212,175,55,.18);
 
-  filter: blur(.12px) saturate(1.03) contrast(1.05);
-
-  user-select: none;
-  pointer-events: none;
+  user-select:none;
+  pointer-events:none;
 }
 
-/* Mobile */
-@media (max-width: 560px){
-  .arrival-room{ min-height: 54vh; }
-
-  .arrival-room__inner{
-    min-height: 54vh;
-    perspective: 720px;
-  }
-
-  .arrival-room__word{
-    left: clamp(2.25rem, 10vw, 6rem);
-    transform:
-      translateY(-50%)
-      rotateX(14deg)
-      rotateY(-4deg)
-      translateZ(60px);
-    font-size: clamp(2.2rem, 7vw, 3.6rem);
-  }
-}
 
 /* =========================
-   Footer
+   HERO
    ========================= */
-.site-footer{
-  border-top: 1px solid var(--line);
-  margin-top: 3rem;
+.hero{
+  margin:0 0 1.5rem;
 }
-.site-footer small{
-  display: block;
-  opacity: .85;
-}
-
-/* =========================
-   Buttons
-   ========================= */
-.btn,
-button{
-  display: inline-block;
-  font: inherit;
-  font-weight: 700;
-  padding: .75rem 1.1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(212,175,55,.35);
-  background: transparent;
-  cursor: pointer;
-  text-decoration: none;
-}
-.btn:hover,
-button:hover{ background: rgba(212,175,55,.06); }
-.btn:active,
-button:active{ transform: translateY(1px); }
-
-/* =========================
-   Karten
-   ========================= */
-.cards{
-  display: grid;
-  gap: 16px;
-  margin-top: 1rem;
-}
-.cards--3{ grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 900px){
-  .cards--3{ grid-template-columns: 1fr; }
-}
-.card{
-  border: 1px solid rgba(212,175,55,.14);
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 1rem 1rem 1.05rem;
-  box-shadow: var(--shadow);
-}
-.card h3{ margin-top: 0; }
-.card p{ margin-bottom: 0; color: var(--text-soft); }
-
-/* =========================
-   Quotes
-   ========================= */
-.quotes{
-  display: grid;
-  gap: 16px;
-  margin-top: 1rem;
-}
-.quotes--grid{ grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 900px){
-  .quotes--grid{ grid-template-columns: 1fr; }
-}
-.quote{
-  border: 1px solid rgba(212,175,55,.14);
-  background: rgba(17,22,27,.55);
-  border-radius: var(--radius);
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  margin: 0;
-}
-.quote blockquote{
-  margin: 0 0 .75rem;
-  color: var(--text-soft);
-}
-.quote figcaption{
-  opacity: .8;
-  font-size: .95rem;
-}
-
-/* =========================
-   Startseite – Hero + Leitmotiv
-   ========================= */
-.hero{ margin: 0 0 1.25rem; }
 
 .hero-media{
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+  position:relative;
+  border-radius: var(--radius);
+  overflow:hidden;
 }
 
 .hero-img{
-  display: block;
-  width: 100%;
-  height: auto;
+  width:100%;
+  display:block;
 }
 
 .hero-overlay{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 1.8rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  pointer-events: none;
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding-top:2rem;
+  pointer-events:none;
 }
 
 .hero-copy{
-  text-align: left;
-  max-width: 36ch;
-  padding: .7rem 1rem;
-  border-radius: 10px;
+  max-width:36ch;
+  padding:.8rem 1rem;
+  border-radius: var(--radius);
   background: rgba(0,0,0,.26);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(212,175,55,0.10);
-  box-shadow: var(--shadow);
+  border:1px solid rgba(212,175,55,.10);
 }
 
-.hero-motto{ margin: 0 0 .35rem; font-weight: 650; letter-spacing: .01em; }
-.hero-sub{ margin: 0; opacity: .85; }
+.hero-motto{ font-weight:650; margin:0 0 .35rem; }
+.hero-sub{ margin:0; opacity:.85; }
 
-.leitmotiv{
-  margin: 1.25rem 0 2.25rem;
-  text-align: left;
-}
-.leitmotiv-line{
-  margin: 0 0 .25rem;
-  font-weight: 700;
-  letter-spacing: .02em;
-  font-size: 1.05rem;
-}
-.leitmotiv-sub{
-  margin: 0;
-  opacity: .85;
-  font-size: .95rem;
-}
 
 /* =========================
-   KI / Split-Layout (wiederverwendbar)
-   ========================= */
-.ki-hero-inline{
-  max-width: 760px;
-  margin: 0 auto 2.25rem;
-  padding: 0 1.25rem;
-
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: clamp(20px, 4vw, 44px);
-  align-items: start;
-}
-
-@media (max-width: 900px){
-  .ki-hero-inline{
-    grid-template-columns: 1fr;
-    padding: 0 1.25rem;
-  }
-}
-
-.ki-hero-text p{
-  margin: 0 0 .85rem;
-  color: var(--text-soft);
-}
-
-.ki-hero-visual{
-  position: relative;
-  margin: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  max-width: 420px;
-  justify-self: end;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(212,175,55,.14);
-  background: rgba(0,0,0,.10);
-}
-
-@media (max-width: 900px){
-  .ki-hero-visual{
-    justify-self: start;
-    max-width: 100%;
-  }
-}
-
-.ki-hero-visual img{
-  display: block;
-  width: 100%;
-  height: clamp(240px, 34vw, 340px);
-  object-fit: cover;
-  object-position: center;
-  opacity: .95;
-}
-
-.ki-human,
-.ki-ai{
-  position: absolute;
-  padding: 0.55rem 0.7rem;
-  border-radius: 10px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  text-shadow: 0 2px 10px rgba(0,0,0,.6);
-  background: rgba(11,15,18,0.35);
-  backdrop-filter: blur(2px);
-}
-.ki-human{
-  left: 14px;
-  bottom: 14px;
-  font-size: .95rem;
-  color: rgba(237,231,218,0.95);
-}
-.ki-ai{
-  right: 14px;
-  top: 14px;
-  font-size: .9rem;
-  color: rgba(212,175,55,0.92);
-}
-
-.caption{
-  margin-top: .65rem;
-  font-size: .92rem;
-  opacity: .82;
-  line-height: 1.45;
-  color: var(--text-soft);
-}
-
-/* Resonanzraum – Bild NICHT beschneiden */
-#ki-referenz .ki-hero-visual{
-  overflow: visible;
-  background: transparent;
-}
-#ki-referenz .ki-hero-visual img{
-  height: auto;
-  object-fit: contain;
-  border-radius: var(--radius);
-}
-
-/* Resonanzraum – Stark im Sturm (Split) */
-.stark-inline{
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: clamp(24px, 5vw, 56px);
-  align-items: start;
-}
-.stark-text{ max-width: 72ch; }
-.stark-visual{
-  margin: 0;
-  max-width: 360px;
-}
-.stark-visual img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-}
-.stark-visual figcaption{
-  margin-top: .5rem;
-  font-size: .85rem;
-  opacity: .75;
-}
-
-@media (max-width: 900px){
-  .stark-inline{ grid-template-columns: 1fr; }
-  .stark-visual{ max-width: 100%; }
-}
-/* =========================
-   Startseite – Portrait (Atemzug)
+   STARTSEITE – PORTRAIT
+   Atemzug unter Hero
    ========================= */
 .home-portrait{
-  padding: 3.25rem 0 2.75rem;
+  padding: 4rem 0 3rem;
 }
 
 .home-portrait__inner{
-  max-width: 520px;   /* ruhige Breite */
+  max-width: 520px;
   margin: 0 auto;
 }
 
 .home-portrait img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px; /* optional: wenn du es ganz hart willst -> 0 */
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius: 6px; /* klarer, erwachsener Look */
+}
+
+
+/* =========================
+   LEITMOTIV
+   ========================= */
+.leitmotiv{
+  margin: 1.5rem 0 2.5rem;
+}
+
+.leitmotiv-line{
+  font-weight:700;
+  margin:0 0 .25rem;
+}
+
+.leitmotiv-sub{
+  margin:0;
+  opacity:.85;
+  font-size:.95rem;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer{
+  border-top:1px solid var(--line);
+  margin-top:3rem;
+}
+
+.site-footer small{
+  display:block;
+  opacity:.85;
 }
