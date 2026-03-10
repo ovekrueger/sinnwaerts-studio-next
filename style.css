@@ -204,7 +204,6 @@ em{ font-style:italic; }
 }
 
 
-
 /* =========================
    HERO
    ========================= */
@@ -218,6 +217,7 @@ em{ font-style:italic; }
   border-radius: var(--radius);
   overflow:hidden;
   height:60vh;
+  max-height:700px;
 }
 
 .hero-img{
@@ -242,17 +242,7 @@ em{ font-style:italic; }
   border-radius: var(--radius);
   background: rgba(0,0,0,.26);
   backdrop-filter: blur(6px);
-}
-
-.hero-motto{
-  font-weight:680;
-  margin:0 0 .5rem;
-}
-
-.hero-sub{
-  margin:0;
-  opacity:.92;
-}/* =========================
+}* =========================
    PORTRAIT
    ========================= */
 
