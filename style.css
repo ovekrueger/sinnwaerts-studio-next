@@ -216,7 +216,7 @@ em{ font-style:italic; }
   position:relative;
   border-radius: var(--radius);
   overflow:hidden;
-  height:60vh;
+  height:68vh;
   max-height:700px;
 }
 
