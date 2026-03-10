@@ -289,19 +289,17 @@ em{ font-style:italic; }
    LEITMOTIV
    ========================= */
 .leitmotiv{
-  margin: 3rem 0 3rem;
+  margin: 1.5rem 0 3rem;
 }
 
 .leitmotiv-line{
-  font-weight:700;
-  font-size:1.25rem;
-  letter-spacing:.02em;
-  margin:0 0 .4rem;
+  font-weight:600;
+  font-size:1.05rem;
+  opacity:.9;
 }
-
 .leitmotiv-sub{
   margin:0;
-  opacity:.7;
+  opacity:.6;
   font-size:.95rem;
 }
 /* =========================
