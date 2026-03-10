@@ -170,7 +170,7 @@ em{ font-style:italic; }
    ========================= */
 .arrival-room{
   width:100%;
-  min-height:48vh;
+  min-height:65vh;
   position:relative;
   overflow:hidden;
   background: var(--bg-main);
