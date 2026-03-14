@@ -265,3 +265,6 @@ em{ font-style:italic; }
 .site-footer small{
   opacity:.85;
 }
+.hero--ueber-mich .hero-overlay{
+  padding-bottom: 8rem;
+}
