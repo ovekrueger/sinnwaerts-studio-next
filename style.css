@@ -208,7 +208,15 @@ em{ font-style:italic; }
   background: none;
   backdrop-filter: none;
 }
+@media (max-width: 600px){
+  .home-portrait{
+    padding: 2rem 0 3rem;
+  }
 
+  .home-portrait__inner{
+    max-width: 260px;
+  }
+}
 .hero-motto{
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 300;
