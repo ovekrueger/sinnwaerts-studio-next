@@ -299,3 +299,14 @@ em{ font-style:italic; }
 .site-footer small{
   opacity: .85;
 }
+/* ── Resonanzraum Hero ── */
+.hero--resonanzraum .hero-img {
+  object-position: center center;
+}
+
+/* ── Portrait Stark im Sturm ── */
+.stark-visual img {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 4px;
+}
