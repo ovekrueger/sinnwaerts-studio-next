@@ -224,4 +224,78 @@ em{ font-style:italic; }
   text-shadow: 0 2px 8px rgba(0,0,0,.6);
 }
 
-.hero--ueber-mich .hero
+.hero--ueber-mich .hero-overlay{
+  padding-bottom: 8rem;
+}
+
+@media (max-width: 600px){
+  .hero-overlay{
+    padding-bottom: 3rem;
+    padding-left: 1.5rem;
+  }
+
+  .hero--ueber-mich .hero-overlay{
+    padding-bottom: 5rem;
+  }
+}
+
+
+/* =========================
+   PORTRAIT
+   ========================= */
+
+.home-portrait{
+  padding: 4rem 0 5rem;
+}
+
+.home-portrait__inner{
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.home-portrait img{
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px){
+  .home-portrait{
+    padding: 2rem 0 3rem;
+  }
+
+  .home-portrait__inner{
+    max-width: 220px;
+  }
+}
+
+
+/* =========================
+   LEITMOTIV
+   ========================= */
+
+.leitmotiv{
+  margin: 3rem 0 3.5rem;
+  text-align: center;
+}
+
+.leitmotiv-line{
+  font-weight: 300;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer{
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+}
+
+.site-footer small{
+  opacity: .85;
+}
