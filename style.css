@@ -342,3 +342,17 @@ em{ font-style:italic; }
     height: 80vh;
   }
 }
+/* ── Kontakt Hero ── */
+.hero--kontakt .hero-img {
+  object-position: center 30%;
+}
+
+@media (max-width: 768px) {
+  .hero--kontakt .hero-media {
+    height: 55vh;
+  }
+  .hero--kontakt .hero-img {
+    object-fit: cover;
+    object-position: center 25%;
+  }
+}
