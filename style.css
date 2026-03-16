@@ -356,3 +356,27 @@ em{ font-style:italic; }
     object-position: center 25%;
   }
 }
+/* ── Angebot Hero ── */
+.hero--angebot .hero-img {
+  object-position: center 35%;
+}
+
+@media (max-width: 768px) {
+  .hero--angebot .hero-media {
+    height: 55vh;
+  }
+  .hero--angebot .hero-img {
+    object-fit: cover;
+    object-position: center 30%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero--angebot .hero-media {
+    height: 60vh;
+  }
+  .hero--angebot .hero-img {
+    object-fit: cover;
+    object-position: center 32%;
+  }
+}
