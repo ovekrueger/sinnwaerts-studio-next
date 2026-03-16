@@ -239,7 +239,11 @@ em{ font-style:italic; }
   }
 }
 
-/* ── Resonanzraum Hero Mobile ── */
+/* ── Resonanzraum Hero ── */
+.hero--resonanzraum .hero-img {
+  object-position: center center;
+}
+
 @media (max-width: 768px) {
   .hero--resonanzraum .hero-media {
     height: 70vh;
@@ -249,6 +253,68 @@ em{ font-style:italic; }
     object-position: center center;
   }
 }
+
+/* ── Sucht & Regulation Hero ── */
+.hero--sucht .hero-img {
+  object-position: center center;
+}
+
+@media (max-width: 768px) {
+  .hero--sucht .hero-media {
+    height: 70vh;
+  }
+  .hero--sucht .hero-img {
+    object-position: center center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero--sucht .hero-media {
+    height: 80vh;
+  }
+}
+
+/* ── Kontakt Hero ── */
+.hero--kontakt .hero-img {
+  object-position: center 30%;
+}
+
+@media (max-width: 768px) {
+  .hero--kontakt .hero-media {
+    height: 55vh;
+  }
+  .hero--kontakt .hero-img {
+    object-fit: cover;
+    object-position: center 25%;
+  }
+}
+
+/* ── Angebot Hero ── */
+.hero--angebot .hero-img {
+  object-position: center 35%;
+}
+
+@media (max-width: 768px) {
+  .hero--angebot .hero-media {
+    height: 55vh;
+  }
+  .hero--angebot .hero-img {
+    object-fit: cover;
+    object-position: center 30%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero--angebot .hero-media {
+    height: 60vh;
+  }
+  .hero--angebot .hero-img {
+    object-fit: cover;
+    object-position: center 32%;
+  }
+}
+
+
 /* =========================
    PORTRAIT
    ========================= */
@@ -308,10 +374,6 @@ em{ font-style:italic; }
 .site-footer small{
   opacity: .85;
 }
-/* ── Resonanzraum Hero ── */
-.hero--resonanzraum .hero-img {
-  object-position: center center;
-}
 
 /* ── Portrait Stark im Sturm ── */
 .stark-visual img {
@@ -319,67 +381,7 @@ em{ font-style:italic; }
   width: 100%;
   border-radius: 4px;
 }
-/* ── Sucht & Regulation Hero ── */
-.hero--sucht .hero-img {
-  object-position: center center;
-}
-/* ── Sucht & Regulation Hero ── */
-.hero--sucht .hero-img {
-  object-position: center center;
-}
 
-@media (max-width: 768px) {
-  .hero--sucht .hero-media {
-    height: 70vh;
-  }
-  .hero--sucht .hero-img {
-    object-position: center center;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero--sucht .hero-media {
-    height: 80vh;
-  }
-}
-/* ── Kontakt Hero ── */
-.hero--kontakt .hero-img {
-  object-position: center 30%;
-}
-
-@media (max-width: 768px) {
-  .hero--kontakt .hero-media {
-    height: 55vh;
-  }
-  .hero--kontakt .hero-img {
-    object-fit: cover;
-    object-position: center 25%;
-  }
-}
-/* ── Angebot Hero ── */
-.hero--angebot .hero-img {
-  object-position: center 35%;
-}
-
-@media (max-width: 768px) {
-  .hero--angebot .hero-media {
-    height: 55vh;
-  }
-  .hero--angebot .hero-img {
-    object-fit: cover;
-    object-position: center 30%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero--angebot .hero-media {
-    height: 60vh;
-  }
-  .hero--angebot .hero-img {
-    object-fit: cover;
-    object-position: center 32%;
-  }
-}
 /* ── Haltung Portrait Layout ── */
 .haltung-intro {
   display: flex;
@@ -394,7 +396,7 @@ em{ font-style:italic; }
 }
 
 .haltung-intro__portrait {
-  flex: 0 0 280px;
+  flex: 0 0 420px;
 }
 
 .haltung-portrait {
@@ -409,7 +411,7 @@ em{ font-style:italic; }
     gap: 2rem;
   }
   .haltung-intro__portrait {
-    flex: 0 0 220px;
+    flex: 0 0 340px;
   }
 }
 
