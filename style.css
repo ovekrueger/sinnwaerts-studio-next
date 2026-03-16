@@ -319,3 +319,7 @@ em{ font-style:italic; }
   width: 100%;
   border-radius: 4px;
 }
+/* ── Sucht & Regulation Hero ── */
+.hero--sucht .hero-img {
+  object-position: center center;
+}
