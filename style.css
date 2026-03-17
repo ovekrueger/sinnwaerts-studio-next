@@ -435,3 +435,14 @@ em{ font-style:italic; }
   object-position: center top;
   display: block;
 }
+/* ── Kontakt Hero Mobile Lesbarkeit ── */
+@media (max-width: 768px) {
+  .hero--kontakt .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      transparent 100%
+    );
+  }
+}
