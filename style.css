@@ -228,6 +228,11 @@ em{ font-style:italic; }
   padding-bottom: 8rem;
 }
 
+/* ── Über mich Hero ── */
+.hero--ueber-mich .hero-img {
+  object-position: center 15%;
+}
+
 @media (max-width: 600px){
   .hero-overlay{
     padding-bottom: 3rem;
@@ -286,6 +291,18 @@ em{ font-style:italic; }
   .hero--kontakt .hero-img {
     object-fit: cover;
     object-position: center 25%;
+  }
+}
+
+/* ── Kontakt Hero Mobile Lesbarkeit ── */
+@media (max-width: 768px) {
+  .hero--kontakt .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      transparent 100%
+    );
   }
 }
 
@@ -427,6 +444,7 @@ em{ font-style:italic; }
     margin: 0 auto;
   }
 }
+
 /* ── KI & Bewusstsein Bild ── */
 .ki-hero-visual img {
   width: 100%;
@@ -434,15 +452,4 @@ em{ font-style:italic; }
   object-fit: cover;
   object-position: center top;
   display: block;
-}
-/* ── Kontakt Hero Mobile Lesbarkeit ── */
-@media (max-width: 768px) {
-  .hero--kontakt .hero-overlay {
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.65) 0%,
-      rgba(0, 0, 0, 0.2) 50%,
-      transparent 100%
-    );
-  }
 }
