@@ -9,39 +9,64 @@
   <link rel="stylesheet" href="./style.css?v=107">
 
   <style>
-    /* ── LTC Siegel ── */
-    .ltc-siegel {
+    /* ── Portrait + Siegel nebeneinander ── */
+    .portrait-siegel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 4rem 0 5rem;
+    }
+
+    .portrait-siegel__img {
+      max-width: 220px;
+      width: 100%;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .portrait-siegel__badge {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.75rem;
-      margin: 3.5rem 0 1rem;
+      gap: 0.6rem;
       text-align: center;
-    }
-
-    .ltc-siegel a {
-      display: inline-block;
       text-decoration: none;
       transition: opacity 0.2s ease;
     }
 
-    .ltc-siegel a:hover {
+    .portrait-siegel__badge:hover {
       opacity: 0.85;
     }
 
-    .ltc-siegel img {
-      width: 140px;
-      height: 140px;
-      border-radius: 14px;
+    .portrait-siegel__badge img {
+      width: 130px;
+      height: 130px;
+      border-radius: 12px;
       display: block;
     }
 
-    .ltc-siegel__caption {
-      font-size: 0.82rem;
-      opacity: 0.6;
+    .portrait-siegel__caption {
+      font-size: 0.75rem;
+      opacity: 0.55;
       letter-spacing: 0.04em;
-      text-decoration: none;
       color: var(--text-main);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 600px) {
+      .portrait-siegel {
+        flex-direction: column;
+        padding: 2rem 0 3rem;
+        gap: 1.5rem;
+      }
+      .portrait-siegel__img {
+        max-width: 180px;
+      }
+      .portrait-siegel__badge img {
+        width: 110px;
+        height: 110px;
+      }
     }
 
     /* ── Footer Siegel ── */
@@ -122,17 +147,29 @@
       </section>
       <!-- /LEITMOTIV -->
 
-      <!-- PORTRAIT -->
-      <section class="home-portrait" aria-label="Portrait">
-        <div class="home-portrait__inner">
+      <!-- PORTRAIT + SIEGEL -->
+      <section aria-label="Portrait und Zertifizierung">
+        <div class="portrait-siegel">
           <img
+            class="portrait-siegel__img"
             src="images/ove-rolli.jpg"
             alt="Ove Krüger – Sinnwärts Studio"
             loading="lazy"
           />
+          <a class="portrait-siegel__badge" href="ausbildung.html" title="Mehr zur Ausbildung">
+            <img
+              src="images/ltc-siegel.png"
+              alt="Life Trust Coaching – zertifiziert by Veit Lindau"
+              loading="lazy"
+            />
+            <span class="portrait-siegel__caption">
+              Zertifiziert nach EASC-Richtlinien<br>
+              Mehr zur Ausbildung →
+            </span>
+          </a>
         </div>
       </section>
-      <!-- /PORTRAIT -->
+      <!-- /PORTRAIT + SIEGEL -->
 
       <!-- LANDUNG -->
       <section id="landung" aria-labelledby="landung-title">
@@ -198,20 +235,7 @@
       </section>
       <!-- /ZEITQUALITÄT -->
 
-      <!-- LTC SIEGEL -->
-      <section class="ltc-siegel" aria-label="Zertifizierung">
-        <a href="ausbildung.html" title="Mehr zur Ausbildung">
-          <img
-            src="images/ltc-siegel.png"
-            alt="Life Trust Coaching – zertifiziert by Veit Lindau"
-            loading="lazy"
-          />
-        </a>
-        <a class="ltc-siegel__caption" href="ausbildung.html">
-          Zertifiziert nach EASC-Richtlinien · Mehr zur Ausbildung
-        </a>
-      </section>
-      <!-- /LTC SIEGEL -->
+
 
     </div>
 
