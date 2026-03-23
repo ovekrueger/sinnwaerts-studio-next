@@ -6,8 +6,74 @@
   <title>Sinnwärts Studio</title>
 
   <link rel="canonical" href="https://sinnwaerts-studio.de/">
-  <link rel="stylesheet" href="./style.css?v=106">
-</head><body>
+  <link rel="stylesheet" href="./style.css?v=107">
+
+  <style>
+    /* ── LTC Siegel ── */
+    .ltc-siegel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 3.5rem 0 1rem;
+      text-align: center;
+    }
+
+    .ltc-siegel a {
+      display: inline-block;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .ltc-siegel a:hover {
+      opacity: 0.85;
+    }
+
+    .ltc-siegel img {
+      width: 140px;
+      height: 140px;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .ltc-siegel__caption {
+      font-size: 0.82rem;
+      opacity: 0.6;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    /* ── Footer Siegel ── */
+    .footer-siegel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-siegel img {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+    }
+
+    .footer-siegel a:hover img {
+      opacity: 1;
+    }
+
+    .footer-siegel__text {
+      font-size: 0.78rem;
+      opacity: 0.6;
+      line-height: 1.4;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
 
   <!-- SITE HEADER -->
   <header class="site-header">
@@ -104,7 +170,7 @@
 
         <p>
           Nicht durch Kontrolle.<br>
-          Sondern durch Verstehen, Tempo, Grenzen – und Kontakt.
+          Sondern durch Verstehen, Tempo raus, Grenzen – und Kontakt.
         </p>
       </section>
       <!-- /ORIENTIERUNG -->
@@ -132,6 +198,21 @@
       </section>
       <!-- /ZEITQUALITÄT -->
 
+      <!-- LTC SIEGEL -->
+      <section class="ltc-siegel" aria-label="Zertifizierung">
+        <a href="ausbildung.html" title="Mehr zur Ausbildung">
+          <img
+            src="images/ltc-siegel.png"
+            alt="Life Trust Coaching – zertifiziert by Veit Lindau"
+            loading="lazy"
+          />
+        </a>
+        <a class="ltc-siegel__caption" href="ausbildung.html">
+          Zertifiziert nach EASC-Richtlinien · Mehr zur Ausbildung
+        </a>
+      </section>
+      <!-- /LTC SIEGEL -->
+
     </div>
 
   </main>
@@ -139,6 +220,21 @@
   <!-- SITE FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="wrap" style="text-align:center; padding:2rem 1rem;">
+
+      <div class="footer-siegel">
+        <a href="ausbildung.html" title="Mehr zur Ausbildung">
+          <img
+            src="images/ltc-siegel.png"
+            alt="Life Trust Coaching zertifiziert by Veit Lindau"
+            loading="lazy"
+          />
+        </a>
+        <div class="footer-siegel__text">
+          Life Trust Coach®<br>
+          zertifiziert by Veit Lindau
+        </div>
+      </div>
+
       <small style="opacity:.85;">
         © <span id="y"></span> Sinnwärts Studio ·
         <a href="impressum.html">Impressum</a> ·
