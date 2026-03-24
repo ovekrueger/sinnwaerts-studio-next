@@ -182,6 +182,13 @@ em{ font-style:italic; }
   border-radius: 0;
 }
 
+@media (max-width: 768px) {
+  .hero-media {
+    height: 50vh;
+    max-height: 400px;
+  }
+}
+
 .hero-img{
   width: 100%;
   height: 100%;
@@ -249,28 +256,9 @@ em{ font-style:italic; }
   object-position: center center;
 }
 
-@media (max-width: 768px) {
-  .hero--resonanzraum .hero-media {
-    height: 70vh;
-  }
-  .hero--resonanzraum .hero-img {
-    object-fit: cover;
-    object-position: center center;
-  }
-}
-
 /* ── Sucht & Regulation Hero ── */
 .hero--sucht .hero-img {
   object-position: center center;
-}
-
-@media (max-width: 768px) {
-  .hero--sucht .hero-media {
-    height: 70vh;
-  }
-  .hero--sucht .hero-img {
-    object-position: center center;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -285,11 +273,7 @@ em{ font-style:italic; }
 }
 
 @media (max-width: 768px) {
-  .hero--kontakt .hero-media {
-    height: 55vh;
-  }
   .hero--kontakt .hero-img {
-    object-fit: cover;
     object-position: center 25%;
   }
 }
@@ -312,11 +296,7 @@ em{ font-style:italic; }
 }
 
 @media (max-width: 768px) {
-  .hero--angebot .hero-media {
-    height: 55vh;
-  }
   .hero--angebot .hero-img {
-    object-fit: cover;
     object-position: center 30%;
   }
 }
@@ -326,9 +306,13 @@ em{ font-style:italic; }
     height: 60vh;
   }
   .hero--angebot .hero-img {
-    object-fit: cover;
     object-position: center 32%;
   }
+}
+
+/* ── Burnout Hero ── */
+.hero--burnout .hero-img {
+  object-position: center center;
 }
 
 
@@ -445,6 +429,43 @@ em{ font-style:italic; }
   }
 }
 
+/* ── Stark im Sturm Layout ── */
+.stark-inline {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.stark-text {
+  flex: 1;
+}
+
+.stark-visual {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.stark-visual figcaption {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+  max-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .stark-inline {
+    flex-direction: column;
+  }
+  .stark-visual {
+    width: 100%;
+  }
+  .stark-visual img {
+    max-width: 220px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 /* ── KI & Bewusstsein Bild ── */
 .ki-hero-visual img {
   width: 100%;
@@ -452,4 +473,93 @@ em{ font-style:italic; }
   object-fit: cover;
   object-position: center top;
   display: block;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cards--3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* =========================
+   QUOTES
+   ========================= */
+
+.quotes--grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 1.5rem;
+}
+
+.quote {
+  margin: 0;
+  padding: 1.25rem;
+  border-left: 2px solid var(--gold);
+  background: var(--card);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.quote blockquote {
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.quote figcaption {
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--gold);
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--bg-main);
+}
+
+/* =========================
+   BLOCK SPACING
+   ========================= */
+
+.block {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.block:last-child {
+  border-bottom: none;
 }
