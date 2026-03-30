@@ -4,16 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Über mich · Sinnwärts Studio</title>
-  <link rel="stylesheet" href="./style.css?v=108">
+  <link rel="stylesheet" href="./style.css?v=109">
 
   <style>
-    /* ── NEUER HERO: Zwei Portraits + KI-Hintergrund ── */
     .hero--vision {
       position: relative;
       width: 100vw;
       left: 50%;
       transform: translateX(-50%);
-      min-height: 85vh;
+      min-height: 88vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -36,8 +35,8 @@
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(11,15,18,0.35) 0%,
-        rgba(11,15,18,0.55) 100%
+        rgba(11,15,18,0.15) 0%,
+        rgba(11,15,18,0.65) 100%
       );
     }
 
@@ -45,83 +44,38 @@
       position: relative;
       z-index: 2;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      padding: 3rem 2.5rem;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 3rem 2rem;
       text-align: center;
+      max-width: 680px;
       width: 100%;
-      max-width: 1100px;
-    }
-
-    .hero--vision__portraits {
-      display: contents;
-    }
-
-    .vision-portrait {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .vision-portrait img {
-      border-radius: 8px;
-      object-fit: cover;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-      display: block;
-    }
-
-    .vision-portrait--now img {
-      width: 180px;
-      height: 230px;
-      object-position: center top;
-    }
-
-    .vision-portrait--85 img {
-      width: 180px;
-      height: 230px;
-      object-position: center top;
-    }
-
-    .vision-portrait__label {
-      font-size: 0.75rem;
-      opacity: 0.7;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-main);
-    }
-
-    .hero--vision__text {
-      flex: 1;
-      max-width: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
     }
 
     .hero--vision__motto {
-      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
       font-weight: 300;
-      letter-spacing: 0.03em;
-      color: var(--text-main);
-      margin: 0 0 0.5rem;
-      text-shadow: 0 2px 12px rgba(0,0,0,.6);
-      line-height: 1.4;
-    }
-
-    .hero--vision__sub {
-      font-size: 0.8rem;
-      opacity: 0.6;
       letter-spacing: 0.04em;
       color: var(--text-main);
       margin: 0;
+      text-shadow: 0 2px 16px rgba(0,0,0,.7);
+      line-height: 1.45;
+    }
+
+    .hero--vision__sub {
+      font-size: 0.78rem;
+      opacity: 0.55;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.6;
     }
 
     .hero--vision__sub a {
       color: var(--gold);
-      opacity: 0.85;
+      opacity: 0.9;
       text-decoration: underline;
       text-underline-offset: 3px;
     }
@@ -132,28 +86,10 @@
 
     @media (max-width: 600px) {
       .hero--vision {
-        min-height: auto;
+        min-height: 75vh;
       }
-
-      .hero--vision__content {
-        flex-direction: column;
-        padding: 2rem 1.5rem;
-        gap: 1.5rem;
-      }
-
-      .hero--vision__portraits {
-        display: flex;
-        gap: 1rem;
-      }
-
-      .vision-portrait--now img,
-      .vision-portrait--85 img {
-        width: 120px;
-        height: 155px;
-      }
-
       .hero--vision__motto {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
       }
     }
   </style>
@@ -183,50 +119,26 @@
   <!-- MAIN -->
   <main>
 
-    <!-- NEUER HERO -->
-    <section class="hero--vision" aria-label="Vision">
-
+    <!-- HERO -->
+    <section class="hero--vision" aria-label="Hero">
       <img
         class="hero--vision__bg"
         src="images/meine-ki-strand.webp"
         alt="Licht und Weite – Sinnwärts Studio"
       />
       <div class="hero--vision__overlay"></div>
-
       <div class="hero--vision__content">
-
-          <div class="vision-portrait vision-portrait--now">
-            <img
-              src="images/ove-jacke.jpg"
-              alt="Ove Krüger – heute"
-              loading="eager"
-            />
-            <span class="vision-portrait__label">Heute</span>
-          </div>
-
-          <div class="hero--vision__text">
-            <p class="hero--vision__motto">
-              Nicht wie ich sein will –<br>
-              sondern wer ich bereits bin.
-            </p>
-            <p class="hero--vision__sub">
-              Mein Ich mit 85 · KI-generiert aus echten Werten ·
-              <a href="ki-und-bewusstsein.html">Mehr dazu auf meiner KI-Seite</a>
-            </p>
-          </div>
-
-          <div class="vision-portrait vision-portrait--85">
-            <img
-              src="images/ove-85.png"
-              alt="Ove Krüger – mit 85"
-              loading="eager"
-            />
-            <span class="vision-portrait__label">Mit 85</span>
-          </div>
-
+        <p class="hero--vision__motto">
+          Nicht wie ich sein will –<br>
+          sondern wer ich bereits bin.
+        </p>
+        <p class="hero--vision__sub">
+          KI-generiert aus echten Werten ·
+          <a href="ki-und-bewusstsein.html">Mehr dazu auf meiner KI-Seite</a>
+        </p>
       </div>
     </section>
-    <!-- /NEUER HERO -->
+    <!-- /HERO -->
 
     <div class="wrap">
 
@@ -242,19 +154,16 @@
       <!-- 1) Wofür ich hier stehe -->
       <section id="haltung" aria-labelledby="haltung-title">
         <h2 id="haltung-title">Wofür ich hier stehe</h2>
-
         <p>
           Ich arbeite mit Menschen, die spüren,
           dass etwas aus dem Gleichgewicht geraten ist –
           ohne es vorschnell als persönliches Versagen zu deuten.
         </p>
-
         <p>
           Mich interessiert weniger,
           was jemand „falsch gemacht" hat,
           sondern unter welchen Bedingungen ein Mensch überhaupt so reagieren musste.
         </p>
-
         <p>
           Meine Haltung ist systemisch, regulativ und integral.
           Ich schaue nicht isoliert auf Symptome,
@@ -263,13 +172,11 @@
           Ankommen vor Veränderung.
           Würde vor Diagnose.
         </p>
-
         <p>
           Ich begegne Menschen klar, zugewandt und ohne Druck.
           Nicht als Problemlöser, nicht als Beschleuniger,
           sondern als jemand, der Raum hält, wenn es unübersichtlich geworden ist.
         </p>
-
         <p>
           Was hier entsteht, ist kein Konzept und kein Versprechen.
           Es ist ein Raum, in dem Verstehen langsamer werden darf –
@@ -280,19 +187,16 @@
       <!-- 2) Herkunft der Haltung -->
       <section id="herkunft" aria-labelledby="herkunft-title">
         <h2 id="herkunft-title">Wie diese Haltung entstanden ist</h2>
-
         <p>
           Diese Haltung ist aus Erfahrung entstanden –
           aus Überforderung, Verlust von Maß
           und dem Versuch, inneren Druck zu regulieren.
         </p>
-
         <p>
           Prägend waren Zeiten,
           in denen Kontrolle und gute Vorsätze nicht mehr getragen haben
           und deutlich wurde, dass es um mehr geht als um Verhalten.
         </p>
-
         <p>
           Daraus ist ein Blick gewachsen,
           der Symptome als verständliche Antworten auf Belastung versteht
@@ -303,7 +207,6 @@
       <!-- 2b) Eigene Erfahrung -->
       <section id="eigene-erfahrung" aria-labelledby="eigene-erfahrung-title">
         <h3 id="eigene-erfahrung-title">Eigene Erfahrung</h3>
-
         <p>
           Ich kenne Suchtdynamiken nicht nur aus der Begleitung anderer.
           Über viele Jahre waren sie Teil meines eigenen Lebens.
@@ -327,14 +230,11 @@
       <!-- 3) Was ich gelernt habe -->
       <section id="erfahrung" aria-labelledby="erfahrung-title">
         <h2 id="erfahrung-title">Was ich gelernt habe</h2>
-
         <p>Ich habe gelernt, dass Einsicht allein selten verändert.</p>
-
         <p>
           Dass Menschen nicht an fehlendem Willen scheitern,
           sondern an überforderten inneren Systemen.
         </p>
-
         <p>
           Und dass nachhaltige Veränderung dort beginnt,
           wo Druck nachlässt und Orientierung entsteht.
@@ -344,22 +244,18 @@
       <!-- 4) Wie ich begleite -->
       <section id="begleitung" aria-labelledby="begleitung-title">
         <h2 id="begleitung-title">Wie ich begleite</h2>
-
         <p>Ich begleite nicht mit schnellen Lösungen und nicht mit Druck.</p>
-
         <p>
           Mein Fokus liegt darauf, Bedingungen zu schaffen,
           unter denen Tempo sinken darf,
           Zusammenhänge wieder sichtbar werden
           und eigene Orientierung entstehen kann.
         </p>
-
         <p>
           Ich arbeite nicht daran, Menschen zu optimieren,
           sondern daran, Bedingungen zu schaffen,
           unter denen Selbstregulation wieder möglich wird.
         </p>
-
         <p>
           Was hier zählt, ist nicht Leistung,
           sondern Tragfähigkeit – Schritt für Schritt, im eigenen Rhythmus.
@@ -369,22 +265,18 @@
       <!-- 5) Für wen / für wen nicht -->
       <section id="passung" aria-labelledby="passung-title">
         <h2 id="passung-title">Für wen das passt – und für wen eher nicht</h2>
-
         <p>
           Diese Arbeit passt für Menschen, die spüren,
           dass sie langsamer werden müssen, um wieder klarer zu sehen.
         </p>
-
         <p>
           Für Menschen, die bereit sind, Zusammenhänge zu betrachten,
           statt sich selbst weiter unter Druck zu setzen.
         </p>
-
         <p>
           Sie passt weniger für diejenigen,
           die schnelle Lösungen, klare Anleitungen oder sofortige Veränderung erwarten.
         </p>
-
         <p>
           Nicht, weil das falsch wäre –
           sondern weil hier ein anderer Rhythmus gilt.
@@ -394,7 +286,6 @@
       <!-- 6) Einladung -->
       <section id="einladung" aria-labelledby="einladung-title">
         <h2 id="einladung-title">Wenn du weitergehen willst</h2>
-
         <p>
           Wenn du hier etwas wiedererkennst und in Ruhe weitergehen möchtest,
           kannst du dir auf den nächsten Seiten Zeit nehmen.
@@ -403,7 +294,6 @@
       </section>
 
     </div>
-
   </main>
 
   <!-- SITE FOOTER -->
