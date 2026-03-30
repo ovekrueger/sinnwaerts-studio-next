@@ -45,20 +45,17 @@
       position: relative;
       z-index: 2;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 2rem;
-      padding: 3rem 1.5rem;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 3rem 2.5rem;
       text-align: center;
-      max-width: 860px;
       width: 100%;
+      max-width: 1100px;
     }
 
     .hero--vision__portraits {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      gap: 3rem;
+      display: contents;
     }
 
     .vision-portrait {
@@ -76,14 +73,14 @@
     }
 
     .vision-portrait--now img {
-      width: 160px;
-      height: 200px;
+      width: 180px;
+      height: 230px;
       object-position: center top;
     }
 
     .vision-portrait--85 img {
-      width: 160px;
-      height: 200px;
+      width: 180px;
+      height: 230px;
       object-position: center top;
     }
 
@@ -96,7 +93,12 @@
     }
 
     .hero--vision__text {
-      max-width: 560px;
+      flex: 1;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
     }
 
     .hero--vision__motto {
@@ -130,11 +132,18 @@
 
     @media (max-width: 600px) {
       .hero--vision {
-        min-height: 70vh;
+        min-height: auto;
+      }
+
+      .hero--vision__content {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
       }
 
       .hero--vision__portraits {
-        gap: 1.5rem;
+        display: flex;
+        gap: 1rem;
       }
 
       .vision-portrait--now img,
@@ -186,8 +195,6 @@
 
       <div class="hero--vision__content">
 
-        <div class="hero--vision__portraits">
-
           <div class="vision-portrait vision-portrait--now">
             <img
               src="images/ove-jacke.jpg"
@@ -195,6 +202,17 @@
               loading="eager"
             />
             <span class="vision-portrait__label">Heute</span>
+          </div>
+
+          <div class="hero--vision__text">
+            <p class="hero--vision__motto">
+              Nicht wie ich sein will –<br>
+              sondern wer ich bereits bin.
+            </p>
+            <p class="hero--vision__sub">
+              Mein Ich mit 85 · KI-generiert aus echten Werten ·
+              <a href="ki-und-bewusstsein.html">Mehr dazu auf meiner KI-Seite</a>
+            </p>
           </div>
 
           <div class="vision-portrait vision-portrait--85">
@@ -205,19 +223,6 @@
             />
             <span class="vision-portrait__label">Mit 85</span>
           </div>
-
-        </div>
-
-        <div class="hero--vision__text">
-          <p class="hero--vision__motto">
-            Nicht wie ich sein will –<br>
-            sondern wer ich bereits bin.
-          </p>
-          <p class="hero--vision__sub">
-            Mein Ich mit 85 · KI-generiert aus echten Werten ·
-            <a href="ki-und-bewusstsein.html">Mehr dazu auf meiner KI-Seite</a>
-          </p>
-        </div>
 
       </div>
     </section>
