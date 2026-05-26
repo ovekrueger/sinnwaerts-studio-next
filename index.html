@@ -6,16 +6,24 @@
   <title>Sinnwärts Studio</title>
 
   <link rel="canonical" href="https://sinnwaerts-studio.de/">
-  <link rel="stylesheet" href="./style.css?v=108">
+  <link rel="stylesheet" href="./style.css?v=109">
 
   <style>
+    /* ── Tokens Startseite ── */
+    :root {
+      --bg-main: #1a1816;
+      --bg-header: #201d1a;
+      --text-main: #EDE7DA;
+      --gold: #C9A84C;
+    }
+
     /* ── Portrait + Siegel nebeneinander ── */
     .portrait-siegel {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 2.5rem;
-      padding: 4rem 0 5rem;
+      padding: 4rem 0 2rem;
     }
 
     .portrait-siegel__img {
@@ -57,7 +65,7 @@
     @media (max-width: 600px) {
       .portrait-siegel {
         flex-direction: column;
-        padding: 2rem 0 3rem;
+        padding: 2rem 0 1.5rem;
         gap: 1.5rem;
       }
       .portrait-siegel__img {
@@ -67,6 +75,35 @@
         width: 110px;
         height: 110px;
       }
+    }
+
+    /* ── Einladungstext vor Portrait ── */
+    .einladung {
+      padding: 3rem 0 2rem;
+      max-width: 600px;
+    }
+
+    .einladung p {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.75;
+      opacity: 0.9;
+    }
+
+    /* ── Name + Haltungssatz ── */
+    .studio-intro {
+      padding: 1rem 0 3rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .studio-intro h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .studio-intro .ich-war {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-style: italic;
+      opacity: 0.75;
+      margin-top: 0;
     }
 
     /* ── Footer Siegel ── */
@@ -122,20 +159,22 @@
 
   <!-- MAIN -->
   <main>
-<!-- HERO -->
-<section class="hero" aria-label="Hero">
-  <div class="hero-media">
-    <img class="hero-img"
-         src="images/Hero-Start.webp"
-         alt="Wattenmeer im Sonnenuntergang – Sinnwärts Studio">
-    <div class="hero-overlay">
-      <div class="hero-copy">
-        <p class="hero-motto">Was ist dein Thema?</p>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-media">
+        <img class="hero-img"
+             src="images/Hero-Start.webp"
+             alt="Wattenmeer im Sonnenuntergang – Sinnwärts Studio">
+        <div class="hero-overlay">
+          <div class="hero-copy">
+            <p class="hero-motto">Was ist dein Thema?</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- /HERO -->  
+    </section>
+    <!-- /HERO -->
+
     <div class="wrap">
 
       <!-- LEITMOTIV -->
@@ -143,6 +182,27 @@
         <p class="leitmotiv-line">Hier darf es langsamer werden.</p>
       </section>
       <!-- /LEITMOTIV -->
+
+      <!-- EINLADUNG -->
+      <section class="einladung" aria-label="Einladung">
+        <p>
+          Manches hat keinen Namen.<br>
+          Es fühlt sich einfach zu viel an. Zu schnell. Zu leer.
+        </p>
+
+        <p>
+          Für alle die spüren, dass etwas nicht stimmt –<br>
+          egal ob Burnout, Social Media, KI, Alkohol, Tempo.<br>
+          Du musst das noch nicht benennen können.
+        </p>
+
+        <p>
+          Ich kenne das Gefühl wenn nichts mehr greift.<br>
+          Und ich weiß: manchmal braucht es keinen Plan.<br>
+          Sondern jemanden der einfach da ist.
+        </p>
+      </section>
+      <!-- /EINLADUNG -->
 
       <!-- PORTRAIT + SIEGEL -->
       <section aria-label="Portrait und Zertifizierung">
@@ -168,71 +228,14 @@
       </section>
       <!-- /PORTRAIT + SIEGEL -->
 
-      <!-- LANDUNG -->
-      <section id="landung" aria-labelledby="landung-title">
-        <h1 id="landung-title">Sinnwärts Studio</h1>
-
-        <p>
-          Nicht alles, was sich wie ein persönliches Problem anfühlt,<br>
-          ist auch eines.
-        </p>
-
-        <p>
-          Manches ist eine verständliche Reaktion<br>
-          auf ein Leben, das zu schnell, zu voll<br>
-          oder zu lange fordernd war.
-        </p>
-
-        <p>
-          Hier geht es um Regulation.<br>
-          Und um einen ruhigen Blick auf das, was gerade wirkt.
+      <!-- STUDIO INTRO -->
+      <section class="studio-intro" aria-label="Studio Einführung">
+        <h1>Sinnwärts Studio</h1>
+        <p class="ich-war">
+          Ich war schon da, wo du gerade hängst.
         </p>
       </section>
-      <!-- /LANDUNG -->
-
-      <!-- ORIENTIERUNG -->
-      <section id="orientierung" aria-labelledby="orientierung-title">
-        <h2 id="orientierung-title">
-          Was genau meint Regulation – und warum ist sie gerade jetzt so wichtig?
-        </h2>
-
-        <p>
-          Regulation bedeutet, innere Zustände wahrzunehmen<br>
-          und ihnen so zu begegnen,<br>
-          dass sie wieder tragfähig werden.
-        </p>
-
-        <p>
-          Nicht durch Kontrolle.<br>
-          Sondern durch Verstehen, Tempo raus, Grenzen – und Kontakt.
-        </p>
-      </section>
-      <!-- /ORIENTIERUNG -->
-
-      <!-- ZEITQUALITÄT -->
-      <section id="zeitqualitaet" aria-labelledby="zeitqualitaet-title">
-        <h2 id="zeitqualitaet-title">Warum gerade jetzt?</h2>
-
-        <p>
-          Gerade jetzt ist das wichtig,<br>
-          weil viele Menschen dauerhaft gefordert sind –<br>
-          ohne echte Pausen, ohne Resonanz, ohne Orientierung.
-        </p>
-
-        <p>
-          Wenn Systeme schneller werden,<br>
-          braucht das Nervensystem etwas anderes:<br>
-          Zeit, Einordnung – und einen ruhigen Blick.
-        </p>
-
-        <p>
-          Nicht, um langsamer zu werden.<br>
-          Sondern um wieder handlungsfähig zu sein.
-        </p>
-      </section>
-      <!-- /ZEITQUALITÄT -->
-
-
+      <!-- /STUDIO INTRO -->
 
     </div>
 
