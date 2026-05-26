@@ -7,13 +7,13 @@
    TOKENS
    ========================= */
 :root{
-  --bg-main: #0B0F12;
-  --bg-header: #11161B;
+  --bg-main: #2a2825;
+  --bg-header: #302d2a;
   --text-main: #EDE7DA;
   --text-soft: rgba(237,231,218,.85);
-  --gold: #D4AF37;
+  --gold: #C9A84C;
   --line: rgba(212,175,55,.15);
-  --card: rgba(17,22,27,.65);
+  --card: rgba(30,26,22,.65);
   --shadow: 0 10px 30px rgba(0,0,0,.25);
   --radius: 12px;
 }
@@ -359,6 +359,22 @@ em{ font-style:italic; }
   font-weight: 300;
   font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+
+/* =========================
+   EINLADUNG
+   ========================= */
+
+.einladung {
+  padding: 3rem 0 2rem;
+  max-width: 600px;
+}
+
+.einladung p {
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
   opacity: 0.9;
 }
 
