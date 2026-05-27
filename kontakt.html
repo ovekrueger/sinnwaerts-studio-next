@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kontakt | Sinnwärts Studio</title>
   <meta name="description" content="Kontakt: Erstkontakt, Fragen, Resonanz. Ruhig, klar, ohne Druck." />
-  <link rel="stylesheet" href="./style.css?v=102" />
+  <link rel="stylesheet" href="./style.css?v=111" />
 </head>
 
 <body>
@@ -31,31 +31,23 @@
 
 <main id="main">
 
-  <!-- HERO -->
-  <section class="hero hero--kontakt" aria-label="Hero">
-    <div class="hero-media">
-      <img class="hero-img"
-           src="images/strandgespraech.webp"
-           alt="Zwei Menschen gehen am Strand entlang im warmen Abendlicht – Sinnwärts Studio">
-      <div class="hero-overlay">
-        <div class="hero-copy">
-          <p class="hero-motto">Trau dich ruhig –</p>
-          <p class="hero-sub">ein Hallo reicht.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /HERO -->
-
-  <section class="wrap block">
+  <!-- LANDUNG -->
+  <section class="wrap block" style="padding-top:3.5rem;">
+    <p style="font-size:clamp(1.4rem,2.5vw,2rem); font-weight:300; letter-spacing:0.08em; margin-bottom:0.5rem;">
+      Trau dich ruhig –
+    </p>
+    <p style="font-style:italic; opacity:0.75; margin-bottom:2rem;">
+      ein Hallo reicht.
+    </p>
     <h1>Kontakt</h1>
     <p>
-      Wenn du spürst, dass meine Arbeit dich anspricht und du klären möchtest,
-      ob und wie eine Begleitung für dich sinnvoll sein kann, nutze gern dieses Formular.
-      Ich lese jede Anfrage persönlich und antworte in Ruhe.
+      Wenn du spürst, dass meine Arbeit dich anspricht –
+      melde dich einfach. Ich lese jede Anfrage persönlich
+      und antworte in Ruhe.
     </p>
   </section>
 
+  <!-- ERREICHBARKEIT -->
   <section class="wrap block">
     <h2>So erreichst du mich</h2>
     <p><strong>E-Mail:</strong> <a href="mailto:ovecoaching@icloud.com">ovecoaching@icloud.com</a></p>
@@ -63,6 +55,7 @@
     <p><strong>Ort:</strong> Hamburg · Online &amp; vor Ort</p>
   </section>
 
+  <!-- FORMULAR -->
   <section class="wrap block">
     <h2>Deine Nachricht</h2>
 
@@ -82,31 +75,9 @@
       </p>
 
       <p>
-        <label for="anliegen">Worum geht es? *</label><br>
-        <select id="anliegen" name="anliegen" required>
-          <option value="" disabled selected>Bitte auswählen…</option>
-          <option>Erstkontakt / Kennenlernen</option>
-          <option>Orientierung / Frage</option>
-          <option>Coaching / Begleitung</option>
-          <option>Rückmeldung / Resonanz</option>
-          <option>Sonstiges</option>
-        </select>
-      </p>
-
-      <p>
-        <label for="msg">Nachricht</label><br>
-        <textarea id="msg" name="message" rows="7"
-          placeholder="Du kannst hier in eigenen Worten beschreiben, was dich bewegt oder warum du Kontakt aufnimmst."></textarea>
-      </p>
-
-      <p>
-        <strong>Wofür dieser Kontakt gedacht ist</strong><br>
-        Erstkontakt · Fragen · Orientierung · Resonanz
-      </p>
-
-      <p>
-        <strong>Wofür dieser Kontakt nicht gedacht ist</strong><br>
-        Akute Krisen · Notfälle · Psychotherapie · medizinische Beratung
+        <label for="msg">Was bewegt dich?</label><br>
+        <textarea id="msg" name="message" rows="6"
+          placeholder="Schreib einfach was dich gerade beschäftigt – kein perfekter Text nötig."></textarea>
       </p>
 
       <p>
@@ -118,9 +89,9 @@
         <a href="datenschutz.html">Datenschutzhinweis</a>
       </p>
 
-      <p>
-        Hinweis: Ich arbeite bewusst entschleunigt. Antworten erfolgen in der Regel innerhalb weniger Tage.
-        Eine Anfrage bedeutet keine automatische Zusammenarbeit, sondern ist ein erster, beidseitig offener Kontakt.
+      <p style="opacity:0.7; font-size:0.9rem;">
+        Ich arbeite bewusst entschleunigt. Antworten kommen in der Regel innerhalb weniger Tage.
+        Eine Anfrage ist ein erster, beidseitig offener Kontakt – kein Versprechen, keine Verpflichtung.
       </p>
 
       <p>
@@ -139,7 +110,7 @@
             headers: { "Accept": "application/json" }
           });
           if (res.ok) {
-            form.innerHTML = "<p><strong>Danke, deine Nachricht wurde gesendet.</strong></p>";
+            form.innerHTML = "<p><strong>Danke – deine Nachricht ist angekommen.</strong></p>";
           } else {
             form.innerHTML = "<p style='color:red;'>Fehler beim Senden – bitte versuch es später erneut.</p>";
           }
@@ -156,11 +127,14 @@
       </p>
     </noscript>
 
-    <p style="margin-top:1.5rem;">
-      Rechtliches:
-      <a href="impressum.html">Impressum</a> ·
-      <a href="datenschutz.html">Datenschutz</a>
-    </p>
+  </section>
+
+  <!-- HINWEIS -->
+  <section class="wrap block">
+    <p><strong>Wofür dieser Kontakt gedacht ist</strong><br>
+    Erstkontakt · Fragen · Orientierung · Resonanz</p>
+    <p><strong>Wofür nicht</strong><br>
+    Akute Krisen · Notfälle · Psychotherapie · medizinische Beratung</p>
   </section>
 
 </main>
