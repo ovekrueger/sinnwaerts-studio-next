@@ -255,7 +255,10 @@ em{ font-style:italic; }
 .hero--resonanzraum .hero-img {
   object-position: center center;
 }
-
+.hero--resonanzraum .hero-overlay {
+  align-items: flex-start;
+  padding-top: 3rem;
+}
 /* ── Sucht & Regulation Hero ── */
 .hero--sucht .hero-img {
   object-position: center center;
