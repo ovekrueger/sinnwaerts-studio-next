@@ -259,6 +259,13 @@ em{ font-style:italic; }
   align-items: flex-start;
   padding-top: 3rem;
 }
+.hero--resonanzraum .hero-caption {
+  text-align: right;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0.25rem 1rem;
+  margin: 0;
+}
 /* ── Sucht & Regulation Hero ── */
 .hero--sucht .hero-img {
   object-position: center center;
