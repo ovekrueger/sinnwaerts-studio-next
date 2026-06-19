@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sinnwaerts-studio.de/sitemap.xml
